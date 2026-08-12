@@ -1,9 +1,0 @@
-{
-  "name": "joey-tan-portfolio",
-  "private": true,
-  "type": "module",
-  "scripts": {
-    "build": "node build-site.mjs",
-    "test": "npm run build && node --test tests/site.test.mjs"
-  }
-}
