@@ -284,6 +284,46 @@ a {
   padding: 0.2rem 0.5rem;
 }
 
+.entry .meta {
+  margin-top: 0.5rem;
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #555;
+}
+
+.entry .meta + .tags {
+  margin-top: 0.6rem;
+}
+
+.entry .tags + .meta {
+  margin-top: 1.25rem;
+}
+
+.entry .bullets {
+  margin-top: 0.9rem;
+  max-width: 62ch;
+  padding-left: 1.1rem;
+  font-size: 1rem;
+}
+
+.entry .bullets li + li {
+  margin-top: 0.5rem;
+}
+
+.group-head {
+  padding: 0.55rem var(--pad);
+  border-bottom: var(--rule);
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
 /* ---- reading list ---- */
 
 .reading-list {

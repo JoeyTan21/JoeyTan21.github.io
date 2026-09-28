@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experience — Joey Tan</title>
+  <meta name="description" content="Work experience, education, and skills of Joey Tan.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22><rect width=%2216%22 height=%2216%22/><text x=%228%22 y=%2212%22 font-family=%22monospace%22 font-size=%229%22 fill=%22white%22 text-anchor=%22middle%22>JT</text></svg>">
+  <link rel="stylesheet" href="/styles.css?v=20260928-1">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="site-nav">
+      <a href="/">Index</a>
+      <a href="/experience/" aria-current="page">Experience</a>
+      <a href="/projects/">Projects</a>
+      <a href="/reading/">Reading</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-title">
+      <p class="kicker">Work, education &amp; skills</p>
+      <h1>Experience</h1>
+    </section>
+
+    <h2 class="group-head">Work experience</h2>
+
+    <article class="entry">
+      <div>
+        <h2>Research Assistant on Trustworthy AI</h2>
+        <p class="meta">Columbia University · Supervisor: Dr. Simin Chen · Jul 2026 – Present</p>
+        <ul class="bullets">
+          <li>Studying whether model compilers (torch.compile, ONNX Runtime) introduce tiny numerical differences that can reveal backdoor attacks on neural networks.</li>
+          <li>Trained a 206K-parameter CNN (85% test accuracy on CIFAR-10) and built a PyTorch harness that compares compiled and uncompiled model outputs bit by bit.</li>
+          <li>Traced the numerical drift to ONNX Runtime's compute kernels (not its graph optimizations): drift starts in the first conv layer and grows 37× by the last layer, without changing the final prediction.</li>
+        </ul>
+        <div class="tags">
+          <span>Python</span><span>PyTorch</span><span>ONNX Runtime</span><span>ML Security</span><span>Research</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="entry">
+      <div>
+        <h2>Software Engineer Intern</h2>
+        <p class="meta">Jiangxi Sincere Mineral Company · Jiangxi, China · Jun 2025 – Sep 2025</p>
+        <ul class="bullets">
+          <li>Built a trade-document processing service that replaced the operations team's manual re-keying of supplier invoices, bills of lading, and assay reports, exposing CRUD REST APIs over a normalized PostgreSQL schema (shipments → documents → extracted fields) with Django REST Framework and version-controlled migrations.</li>
+          <li>Redesigned document intake as an asynchronous pipeline: the upload endpoint writes the file to S3, enqueues a Celery task on Redis, and returns a job ID immediately while the frontend polls a status endpoint, so a 30–60 second LLM extraction no longer blocked the request thread or timed out the browser on large scanned PDFs.</li>
+          <li>Designed an Adapter layer that normalizes documents arriving as scanned PDFs, supplier Excel workbooks, and flat CSV exports into a single internal schema, so onboarding a new supplier format meant adding one adapter class instead of branching the parsing logic in every call site.</li>
+          <li>Implemented two-tier duplicate detection in the service layer: an exact match on invoice number returns a blocking Error, while a fuzzy match on (supplier, date, tonnage, amount) returns a non-blocking Warning the operator can override, eliminating double-entry into settlement records without rejecting legitimately reissued documents.</li>
+          <li>Refactored the codebase into Controller (views) → Service → Repository layers, so validation and settlement rules are unit-tested with pytest against mocked repositories and a mocked LLM client, keeping the suite deterministic and free of external API cost on every CI run.</li>
+        </ul>
+        <div class="tags">
+          <span>Python</span><span>Django REST Framework</span><span>PostgreSQL</span><span>Celery</span><span>Redis</span><span>S3</span><span>pytest</span>
+        </div>
+      </div>
+    </article>
+
+    <h2 class="group-head">Education</h2>
+
+    <article class="entry">
+      <div>
+        <h2>Carnegie Mellon University</h2>
+        <p class="meta">Master of Information Systems Management · Pittsburgh, PA · Aug 2026 – Dec 2027</p>
+        <p>Coursework: Large Language Model Systems, Data Structures and Algorithms.</p>
+      </div>
+    </article>
+
+    <article class="entry">
+      <div>
+        <h2>University of Washington</h2>
+        <p class="meta">Bachelor of Arts, Mathematics &amp; Philosophy · Seattle, WA · Sep 2021 – Jun 2025</p>
+      </div>
+    </article>
+
+    <h2 class="group-head">Skills</h2>
+
+    <article class="entry">
+      <div>
+        <p class="meta">Programming</p>
+        <div class="tags">
+          <span>Python</span><span>Java</span><span>JavaScript</span><span>HTML</span><span>CSS</span><span>Matlab</span>
+        </div>
+        <p class="meta">Tools</p>
+        <div class="tags">
+          <span>React</span><span>Pandas</span><span>Git</span><span>Linux</span>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <span>&copy; 2026 Joey Tan</span>
+    <span><a href="https://github.com/JoeyTan21" target="_blank" rel="noopener">github.com/JoeyTan21</a></span>
+  </footer>
+
+</body>
+</html>

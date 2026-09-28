@@ -6,6 +6,7 @@ Personal website of Joey Tan. Plain HTML/CSS, no build step.
 
 ```
 index.html           # Home: name, tagline, contact links
+experience/index.html # Work experience, education, skills — mirrors the resume
 projects/index.html  # Projects list — edit the <article class="entry"> blocks
 reading/index.html   # Reading list — edit the <li> items
 styles.css           # All styling (Swiss B/W, edit CSS variables at top)
