@@ -10,7 +10,7 @@ experience/index.html # Work experience, education, skills — mirrors the resum
 projects/index.html  # Projects list — edit the <article class="entry"> blocks
 open-source/index.html # Open-source PRs: featured entries by hand, table generated
 scripts/update_prs.py  # Regenerates the PR table (needs `gh`); add PRs to its PRS list
-reading/index.html   # Reading list — edit the <li> items
+reading/index.html   # Reading list — newest first, add new <li> items at the top
 styles.css           # All styling (Swiss B/W, edit CSS variables at top)
 ```
 
