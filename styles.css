@@ -377,6 +377,51 @@ a {
   white-space: nowrap;
 }
 
+/* ---- open-source PR table ---- */
+
+.entry code {
+  font-family: var(--mono);
+  font-size: 0.85em;
+  background: #f1f1f1;
+  padding: 0.05em 0.3em;
+}
+
+.pr-head,
+.pr-list li {
+  grid-template-columns: minmax(12rem, 1fr) minmax(0, 2fr) 5.5rem;
+}
+
+.pr-list .title {
+  font-family: var(--mono);
+  font-weight: 400;
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+  word-break: break-word;
+}
+
+.pr-list .title:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.pr-list .pr-num {
+  color: #777;
+}
+
+.pr-list .author {
+  color: #333;
+}
+
+.pr-list .status-merged {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.pr-list .status-closed {
+  color: #777;
+  border-color: #aaa;
+}
+
 /* ---- footer ---- */
 
 .site-footer {
@@ -399,7 +444,7 @@ a {
 
 /* ---- mobile ---- */
 
-@media (max-width: 480px) {
+@media (max-width: 640px) {
   .reading-head {
     display: none;
   }
