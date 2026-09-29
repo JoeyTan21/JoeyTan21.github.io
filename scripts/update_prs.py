@@ -21,6 +21,8 @@ PRS = [
      "get_json_schema dropped items/enum when flattening unions of list, dict and Literal types"),
     ("pydantic/pydantic-ai", 8848,
      "application/toml is now text-like, so TOML BinaryContent is inlined instead of rejected"),
+    ("huggingface/diffusers", 14910,
+     "CFG cutoff callbacks kept one embedding row, breaking num_images_per_prompt > 1 and multi-prompt batches"),
     ("mlflow/mlflow", 26260,
      "Schema inference failed or silently degraded to Any depending on where a None value appeared"),
     ("huggingface/trl", 7446,
