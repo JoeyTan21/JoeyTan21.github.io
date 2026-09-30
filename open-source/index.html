@@ -70,6 +70,27 @@
       </div>
     </article>
 
+    <article class="entry">
+      <div>
+        <h2>Hugging Face TRL — SFTTrainer appends EOS to any text column</h2>
+        <p class="meta">huggingface/trl · PR #7446 · Merged Sep 2026</p>
+        <p>
+          During dataset preparation, <code>SFTTrainer</code> only appended the EOS
+          token to a column literally named <code>"text"</code>, while tokenization read
+          whatever column <code>dataset_text_field</code> pointed to. Setting
+          <code>dataset_text_field</code> to any other name therefore produced training
+          examples with no EOS at all, with no error or warning, so the model never learned
+          to stop. The fix passes <code>dataset_text_field</code> into the EOS step so both
+          stages agree on the column, with a parametrized regression test that also adds
+          the first EOS assertion for the default <code>"text"</code> path.
+        </p>
+        <a class="project-link" href="https://github.com/huggingface/trl/pull/7446" target="_blank" rel="noopener">View pull request ↗</a>
+        <div class="tags">
+          <span>Python</span><span>LLM Fine-tuning</span><span>Data Preprocessing</span>
+        </div>
+      </div>
+    </article>
+
     <h2 class="group-head">All pull requests</h2>
 
     <div class="reading-head pr-head" aria-hidden="true">
@@ -91,6 +112,11 @@
         <span class="status status-merged">Merged</span>
       </li>
       <li>
+        <a class="title" href="https://github.com/huggingface/trl/pull/7446" target="_blank" rel="noopener">huggingface/trl <span class="pr-num">#7446</span></a>
+        <span class="author">SFTTrainer never appended EOS when dataset_text_field was set to anything other than &quot;text&quot;</span>
+        <span class="status status-merged">Merged</span>
+      </li>
+      <li>
         <a class="title" href="https://github.com/huggingface/diffusers/pull/14910" target="_blank" rel="noopener">huggingface/diffusers <span class="pr-num">#14910</span></a>
         <span class="author">CFG cutoff callbacks kept one embedding row, breaking num_images_per_prompt &gt; 1 and multi-prompt batches</span>
         <span class="status status-open">Open</span>
@@ -98,16 +124,6 @@
       <li>
         <a class="title" href="https://github.com/mlflow/mlflow/pull/26260" target="_blank" rel="noopener">mlflow/mlflow <span class="pr-num">#26260</span></a>
         <span class="author">Schema inference failed or silently degraded to Any depending on where a None value appeared</span>
-        <span class="status status-open">Open</span>
-      </li>
-      <li>
-        <a class="title" href="https://github.com/huggingface/trl/pull/7446" target="_blank" rel="noopener">huggingface/trl <span class="pr-num">#7446</span></a>
-        <span class="author">SFTTrainer never appended EOS when dataset_text_field was set to anything other than &quot;text&quot;</span>
-        <span class="status status-open">Open</span>
-      </li>
-      <li>
-        <a class="title" href="https://github.com/huggingface/pytorch-image-models/pull/2817" target="_blank" rel="noopener">huggingface/pytorch-image-models <span class="pr-num">#2817</span></a>
-        <span class="author">list_models(exclude_filters=&#x27;&lt;str&gt;&#x27;) iterated the string per character and excluded everything</span>
         <span class="status status-open">Open</span>
       </li>
       <li>
@@ -154,6 +170,11 @@
         <a class="title" href="https://github.com/kamillobinski/thock/pull/107" target="_blank" rel="noopener">kamillobinski/thock <span class="pr-num">#107</span></a>
         <span class="author">Bluetooth audio artifacts and idle-queue noise in a macOS keyboard-sound app (Swift)</span>
         <span class="status status-open">Open</span>
+      </li>
+      <li>
+        <a class="title" href="https://github.com/huggingface/pytorch-image-models/pull/2817" target="_blank" rel="noopener">huggingface/pytorch-image-models <span class="pr-num">#2817</span></a>
+        <span class="author">list_models(exclude_filters=&#x27;&lt;str&gt;&#x27;) iterated the string per character and excluded everything</span>
+        <span class="status status-closed">Closed</span>
       </li>
       <!-- prs:end -->
     </ul>
