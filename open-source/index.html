@@ -91,6 +91,28 @@
       </div>
     </article>
 
+    <article class="entry">
+      <div>
+        <h2>MLflow — order-independent schema inference for missing values</h2>
+        <p class="meta">mlflow/mlflow · PR #26260 · Merged Sep 2026</p>
+        <p>
+          When inferring a model signature, MLflow types a <code>None</code> value as
+          <code>AnyType</code> and merges it with the concrete types seen elsewhere. The
+          merge only worked when <code>AnyType</code> came first: <code>[{"k": None}, {"k": 1}]</code>
+          inferred an optional <code>long</code>, but <code>[{"k": 1}, {"k": None}]</code> raised
+          "Properties are incompatible". For inputs like chat histories, where a tool-call
+          message's <code>content</code> is <code>None</code>, <code>infer_signature</code> then
+          silently fell back to an untyped schema. The fix makes the property, array and map
+          merges accept <code>AnyType</code> on either side, with tests covering both orders,
+          nested values and unchanged required-field semantics.
+        </p>
+        <a class="project-link" href="https://github.com/mlflow/mlflow/pull/26260" target="_blank" rel="noopener">View pull request ↗</a>
+        <div class="tags">
+          <span>Python</span><span>MLOps</span><span>Schema Inference</span>
+        </div>
+      </div>
+    </article>
+
     <h2 class="group-head">All pull requests</h2>
 
     <div class="reading-head pr-head" aria-hidden="true">
@@ -112,6 +134,11 @@
         <span class="status status-merged">Merged</span>
       </li>
       <li>
+        <a class="title" href="https://github.com/mlflow/mlflow/pull/26260" target="_blank" rel="noopener">mlflow/mlflow <span class="pr-num">#26260</span></a>
+        <span class="author">Schema inference failed or silently degraded to Any depending on where a None value appeared</span>
+        <span class="status status-merged">Merged</span>
+      </li>
+      <li>
         <a class="title" href="https://github.com/huggingface/trl/pull/7446" target="_blank" rel="noopener">huggingface/trl <span class="pr-num">#7446</span></a>
         <span class="author">SFTTrainer never appended EOS when dataset_text_field was set to anything other than &quot;text&quot;</span>
         <span class="status status-merged">Merged</span>
@@ -119,11 +146,6 @@
       <li>
         <a class="title" href="https://github.com/huggingface/diffusers/pull/14910" target="_blank" rel="noopener">huggingface/diffusers <span class="pr-num">#14910</span></a>
         <span class="author">CFG cutoff callbacks kept one embedding row, breaking num_images_per_prompt &gt; 1 and multi-prompt batches</span>
-        <span class="status status-open">Open</span>
-      </li>
-      <li>
-        <a class="title" href="https://github.com/mlflow/mlflow/pull/26260" target="_blank" rel="noopener">mlflow/mlflow <span class="pr-num">#26260</span></a>
-        <span class="author">Schema inference failed or silently degraded to Any depending on where a None value appeared</span>
         <span class="status status-open">Open</span>
       </li>
       <li>
