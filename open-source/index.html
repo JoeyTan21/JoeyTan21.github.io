@@ -113,6 +113,26 @@
       </div>
     </article>
 
+    <article class="entry">
+      <div>
+        <h2>Docling — case-insensitive format detection for file paths</h2>
+        <p class="meta">docling-project/docling · PR #4430 · Merged Oct 2026</p>
+        <p>
+          Docling guesses an input's format from magic bytes and, for plain-text formats it
+          cannot sniff, from the file extension. The <code>DocumentStream</code> branch already
+          lower-cased the extension, but the <code>Path</code> branch did not, so converting
+          <code>notes.VTT</code> from disk failed with "File format not allowed" while the same
+          content passed as a stream worked. The fix lower-cases the suffix in the path branch
+          to match, with a parametrized test asserting that both input kinds resolve to the
+          same format.
+        </p>
+        <a class="project-link" href="https://github.com/docling-project/docling/pull/4430" target="_blank" rel="noopener">View pull request ↗</a>
+        <div class="tags">
+          <span>Python</span><span>Document Parsing</span><span>Input Handling</span>
+        </div>
+      </div>
+    </article>
+
     <h2 class="group-head">All pull requests</h2>
 
     <div class="reading-head pr-head" aria-hidden="true">
@@ -144,6 +164,11 @@
         <span class="status status-merged">Merged</span>
       </li>
       <li>
+        <a class="title" href="https://github.com/docling-project/docling/pull/4430" target="_blank" rel="noopener">docling-project/docling <span class="pr-num">#4430</span></a>
+        <span class="author">Path inputs with an upper-case extension (notes.VTT) were rejected as an unknown format</span>
+        <span class="status status-merged">Merged</span>
+      </li>
+      <li>
         <a class="title" href="https://github.com/huggingface/diffusers/pull/14910" target="_blank" rel="noopener">huggingface/diffusers <span class="pr-num">#14910</span></a>
         <span class="author">CFG cutoff callbacks kept one embedding row, breaking num_images_per_prompt &gt; 1 and multi-prompt batches</span>
         <span class="status status-open">Open</span>
@@ -151,11 +176,6 @@
       <li>
         <a class="title" href="https://github.com/huggingface/accelerate/pull/4354" target="_blank" rel="noopener">huggingface/accelerate <span class="pr-num">#4354</span></a>
         <span class="author">wait_for_everyone() crashed on MULTI_CPU when the machine has a non-CUDA accelerator (MPS)</span>
-        <span class="status status-open">Open</span>
-      </li>
-      <li>
-        <a class="title" href="https://github.com/docling-project/docling/pull/4430" target="_blank" rel="noopener">docling-project/docling <span class="pr-num">#4430</span></a>
-        <span class="author">Path inputs with an upper-case extension (notes.VTT) were rejected as an unknown format</span>
         <span class="status status-open">Open</span>
       </li>
       <li>
