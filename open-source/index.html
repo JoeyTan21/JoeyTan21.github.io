@@ -133,6 +133,28 @@
       </div>
     </article>
 
+    <article class="entry">
+      <div>
+        <h2>Accelerate — fix <code>wait_for_everyone()</code> crash in multi-process CPU runs</h2>
+        <p class="meta">huggingface/accelerate · PR #4354 · Merged Oct 2026</p>
+        <p>
+          An earlier change passed <code>device_ids=[local_rank]</code> to every
+          <code>torch.distributed.barrier</code> call to silence a CUDA warning. With
+          <code>device_ids</code> set, PyTorch picks the barrier device from the machine's
+          accelerator, so a multi-process CPU (gloo) run on a Mac crashed in
+          <code>accelerator.wait_for_everyone()</code> with "c10d::barrier not implemented for MPS".
+          The repository's MULTI_CPU tests were skipped on MPS machines, so the crash had gone
+          unnoticed for several releases. The fix leaves out <code>device_ids</code> for MULTI_CPU,
+          letting PyTorch choose the CPU device for the gloo group, and was verified with a
+          two-process reproduction script.
+        </p>
+        <a class="project-link" href="https://github.com/huggingface/accelerate/pull/4354" target="_blank" rel="noopener">View pull request ↗</a>
+        <div class="tags">
+          <span>Python</span><span>PyTorch</span><span>Distributed Training</span>
+        </div>
+      </div>
+    </article>
+
     <h2 class="group-head">All pull requests</h2>
 
     <div class="reading-head pr-head" aria-hidden="true">
@@ -164,6 +186,11 @@
         <span class="status status-merged">Merged</span>
       </li>
       <li>
+        <a class="title" href="https://github.com/huggingface/accelerate/pull/4354" target="_blank" rel="noopener">huggingface/accelerate <span class="pr-num">#4354</span></a>
+        <span class="author">wait_for_everyone() crashed on MULTI_CPU when the machine has a non-CUDA accelerator (MPS)</span>
+        <span class="status status-merged">Merged</span>
+      </li>
+      <li>
         <a class="title" href="https://github.com/docling-project/docling/pull/4430" target="_blank" rel="noopener">docling-project/docling <span class="pr-num">#4430</span></a>
         <span class="author">Path inputs with an upper-case extension (notes.VTT) were rejected as an unknown format</span>
         <span class="status status-merged">Merged</span>
@@ -171,11 +198,6 @@
       <li>
         <a class="title" href="https://github.com/huggingface/diffusers/pull/14910" target="_blank" rel="noopener">huggingface/diffusers <span class="pr-num">#14910</span></a>
         <span class="author">CFG cutoff callbacks kept one embedding row, breaking num_images_per_prompt &gt; 1 and multi-prompt batches</span>
-        <span class="status status-open">Open</span>
-      </li>
-      <li>
-        <a class="title" href="https://github.com/huggingface/accelerate/pull/4354" target="_blank" rel="noopener">huggingface/accelerate <span class="pr-num">#4354</span></a>
-        <span class="author">wait_for_everyone() crashed on MULTI_CPU when the machine has a non-CUDA accelerator (MPS)</span>
         <span class="status status-open">Open</span>
       </li>
       <li>
