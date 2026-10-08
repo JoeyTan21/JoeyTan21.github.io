@@ -155,6 +155,74 @@
       </div>
     </article>
 
+    <article class="entry">
+      <div>
+        <h2>Hugging Face Datasets — multi-dimensional array columns round-trip through pandas</h2>
+        <p class="meta">huggingface/datasets · PR #8701 · Merged Oct 2026</p>
+        <p>
+          <code>Array2D</code>…<code>Array5D</code> columns become a custom pandas ExtensionArray in
+          <code>to_pandas()</code>, but that class only implemented the Arrow → pandas direction
+          (<code>__from_arrow__</code>), not pandas → Arrow (<code>__arrow_array__</code>). As a result
+          <code>Dataset.from_pandas(ds.to_pandas())</code> and a batched <code>map</code> under
+          <code>with_format("pandas")</code> both raised <code>ArrowTypeError</code>, for fixed and
+          variable first-dimension shapes alike. Found with a round-trip property test over twenty-odd
+          feature types. The fix adds <code>__arrow_array__</code>, reusing the writer's existing
+          nested-list conversion and wrapping it in the matching extension type so the feature type
+          survives the round trip; covered by a regression test for both directions.
+        </p>
+        <a class="project-link" href="https://github.com/huggingface/datasets/pull/8701" target="_blank" rel="noopener">View pull request ↗</a>
+        <div class="tags">
+          <span>Python</span><span>Apache Arrow</span><span>pandas</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="entry">
+      <div>
+        <h2>TransformerLens — consistent <code>pos_slice</code> across the two activation-caching APIs</h2>
+        <p class="meta">TransformerLensOrg/TransformerLens · PR #1859 · Merged Oct 2026</p>
+        <p>
+          <code>run_with_cache</code> and <code>get_caching_hooks</code> both accept <code>pos_slice</code>
+          (keep some sequence positions) and <code>remove_batch_dim</code>. The hook-based path dropped the
+          batch axis <em>before</em> slicing, so the hard-coded "position is dim 1" lookup landed on
+          <code>d_model</code> or the heads and silently returned a slice of the wrong axis, while
+          <code>run_with_cache</code> gave a different tensor for the same inputs. Review showed the
+          hard-coded axis was itself wrong for head-major hooks (Gemma-3 / Cohere post-reshape norms,
+          Mamba's conv input, MLA projections), so the final change lets each <code>HookPoint</code> declare
+          its position axis, tags those components, and resolves the axis in both APIs. Verified by
+          sweeping twelve architectures on random-init models; tests use no downloaded weights and assert
+          the two APIs agree for int, range and list slices, including backward hooks.
+        </p>
+        <a class="project-link" href="https://github.com/TransformerLensOrg/TransformerLens/pull/1859" target="_blank" rel="noopener">View pull request ↗</a>
+        <div class="tags">
+          <span>Python</span><span>PyTorch</span><span>Mechanistic Interpretability</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="entry">
+      <div>
+        <h2>Sentence Transformers — load model2vec token mapping and weights in <code>StaticEmbedding</code></h2>
+        <p class="meta">huggingface/sentence-transformers · PR #4108 · Merged Oct 2026</p>
+        <p>
+          <code>StaticEmbedding.load</code>, <code>from_model2vec</code> and <code>from_distillation</code>
+          read only the <code>embeddings</code> tensor from a model2vec checkpoint and ignored the optional
+          token → row <code>mapping</code> and per-token <code>weights</code> that newer model2vec releases
+          add for vocabulary quantization. The official <code>potion-code-16M</code> therefore encoded
+          silently wrong (cosine 0.64 against model2vec's own output), and quantized-vocabulary models
+          crashed with an index error. Found by auditing the safetensors keys of every published model2vec
+          checkpoint and comparing outputs tensor by tensor. The fix folds mapping and weights into one row
+          per token at load time, which is mathematically equivalent to the weighted mean and leaves the
+          forward pass and save format untouched; the maintainer added an FP32 promotion for half-precision
+          weights before merging.
+        </p>
+        <a class="project-link" href="https://github.com/huggingface/sentence-transformers/pull/4108" target="_blank" rel="noopener">View pull request ↗</a>
+        <div class="tags">
+          <span>Python</span><span>PyTorch</span><span>Embeddings</span>
+        </div>
+      </div>
+    </article>
+
     <h2 class="group-head">All pull requests</h2>
 
     <div class="reading-head pr-head" aria-hidden="true">
@@ -196,13 +264,23 @@
         <span class="status status-merged">Merged</span>
       </li>
       <li>
-        <a class="title" href="https://github.com/huggingface/diffusers/pull/14910" target="_blank" rel="noopener">huggingface/diffusers <span class="pr-num">#14910</span></a>
-        <span class="author">CFG cutoff callbacks kept one embedding row, breaking num_images_per_prompt &gt; 1 and multi-prompt batches</span>
-        <span class="status status-open">Open</span>
-      </li>
-      <li>
         <a class="title" href="https://github.com/huggingface/datasets/pull/8701" target="_blank" rel="noopener">huggingface/datasets <span class="pr-num">#8701</span></a>
         <span class="author">ArrayXD columns could not round-trip from pandas back to Arrow (adds __arrow_array__)</span>
+        <span class="status status-merged">Merged</span>
+      </li>
+      <li>
+        <a class="title" href="https://github.com/huggingface/sentence-transformers/pull/4108" target="_blank" rel="noopener">huggingface/sentence-transformers <span class="pr-num">#4108</span></a>
+        <span class="author">Apply model2vec token mapping and per-token weights when loading StaticEmbedding</span>
+        <span class="status status-merged">Merged</span>
+      </li>
+      <li>
+        <a class="title" href="https://github.com/TransformerLensOrg/TransformerLens/pull/1859" target="_blank" rel="noopener">TransformerLensOrg/TransformerLens <span class="pr-num">#1859</span></a>
+        <span class="author">get_caching_hooks sliced the wrong axis with remove_batch_dim + pos_slice; position axis now resolved per hook</span>
+        <span class="status status-merged">Merged</span>
+      </li>
+      <li>
+        <a class="title" href="https://github.com/huggingface/diffusers/pull/14910" target="_blank" rel="noopener">huggingface/diffusers <span class="pr-num">#14910</span></a>
+        <span class="author">CFG cutoff callbacks kept one embedding row, breaking num_images_per_prompt &gt; 1 and multi-prompt batches</span>
         <span class="status status-open">Open</span>
       </li>
       <li>
@@ -231,8 +309,18 @@
         <span class="status status-open">Open</span>
       </li>
       <li>
-        <a class="title" href="https://github.com/huggingface/sentence-transformers/pull/4108" target="_blank" rel="noopener">huggingface/sentence-transformers <span class="pr-num">#4108</span></a>
-        <span class="author">Apply model2vec token mapping and per-token weights when loading StaticEmbedding</span>
+        <a class="title" href="https://github.com/UKGovernmentBEIS/inspect_ai/pull/5746" target="_blank" rel="noopener">UKGovernmentBEIS/inspect_ai <span class="pr-num">#5746</span></a>
+        <span class="author">Dataclass tool parameters lost their types under `from __future__ import annotations`</span>
+        <span class="status status-open">Open</span>
+      </li>
+      <li>
+        <a class="title" href="https://github.com/browser-use/browser-use/pull/5986" target="_blank" rel="noopener">browser-use/browser-use <span class="pr-num">#5986</span></a>
+        <span class="author">SchemaOptimizer hit RecursionError on self-referential output models; recursive $refs are now kept in $defs</span>
+        <span class="status status-open">Open</span>
+      </li>
+      <li>
+        <a class="title" href="https://github.com/shap/shap/pull/5206" target="_blank" rel="noopener">shap/shap <span class="pr-num">#5206</span></a>
+        <span class="author">format_value stripped trailing zeros from string categories, so the bar plot showed &quot;2020&quot; as 202</span>
         <span class="status status-open">Open</span>
       </li>
       <li>
