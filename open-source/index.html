@@ -281,6 +281,25 @@
       </div>
     </article>
 
+    <article class="entry">
+      <div>
+        <h2>Narwhals — Unicode-aware title case on SQL backends and older Polars</h2>
+        <p class="meta">narwhals-dev/narwhals · PR #4085 · Merged Oct 2026</p>
+        <p>
+          On DuckDB and Spark-like backends, <code>str.to_titlecase</code> split words with the ASCII-only
+          regex <code>[a-z]*[^a-z]*</code>, so every accented letter started a new word and
+          <code>münchen straße</code> silently became <code>MüNchen StraßE</code>. The fix switches to the
+          Unicode letter classes <code>\p{L}*\P{L}*</code>, matching Python's <code>str.title</code> and
+          native Polars. In review, the maintainer pointed out that the fallback for Polars &lt; 1.35
+          rebuilt title case with the same regex, so it got the same fix, tested on Polars 0.20, 1.20 and 2.0.
+        </p>
+        <a class="project-link" href="https://github.com/narwhals-dev/narwhals/pull/4085" target="_blank" rel="noopener">View pull request ↗</a>
+        <div class="tags">
+          <span>Python</span><span>DataFrames</span><span>SQL</span>
+        </div>
+      </div>
+    </article>
+
     <h2 class="group-head">All pull requests</h2>
 
     <div class="reading-head pr-head" aria-hidden="true">
@@ -352,6 +371,11 @@
         <span class="status status-merged">Merged</span>
       </li>
       <li>
+        <a class="title" href="https://github.com/narwhals-dev/narwhals/pull/4085" target="_blank" rel="noopener">narwhals-dev/narwhals <span class="pr-num">#4085</span></a>
+        <span class="author">str.to_titlecase split words at accented letters on DuckDB and Spark-like (&quot;münchen&quot; -&gt; &quot;MüNchen&quot;)</span>
+        <span class="status status-merged">Merged</span>
+      </li>
+      <li>
         <a class="title" href="https://github.com/huggingface/diffusers/pull/14910" target="_blank" rel="noopener">huggingface/diffusers <span class="pr-num">#14910</span></a>
         <span class="author">CFG cutoff callbacks kept one embedding row, breaking num_images_per_prompt &gt; 1 and multi-prompt batches</span>
         <span class="status status-open">Open</span>
@@ -374,11 +398,6 @@
       <li>
         <a class="title" href="https://github.com/chroma-core/chroma/pull/7831" target="_blank" rel="noopener">chroma-core/chroma <span class="pr-num">#7831</span></a>
         <span class="author">Accept NumPy scalar elements (np.float32, np.int64) in list embeddings instead of raising ValueError</span>
-        <span class="status status-open">Open</span>
-      </li>
-      <li>
-        <a class="title" href="https://github.com/narwhals-dev/narwhals/pull/4085" target="_blank" rel="noopener">narwhals-dev/narwhals <span class="pr-num">#4085</span></a>
-        <span class="author">str.to_titlecase split words at accented letters on DuckDB and Spark-like (&quot;münchen&quot; -&gt; &quot;MüNchen&quot;)</span>
         <span class="status status-open">Open</span>
       </li>
       <li>
