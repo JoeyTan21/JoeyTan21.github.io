@@ -300,6 +300,27 @@
       </div>
     </article>
 
+    <article class="entry">
+      <div>
+        <h2>sbi — KDE cross-validation that refines around the right bandwidth</h2>
+        <p class="meta">sbi-dev/sbi · PR #2061 · Merged Oct 2026</p>
+        <p>
+          With <code>get_kde(bandwidth="cv")</code>, when the best bandwidth landed on the edge of the
+          search grid, the refinement step centered the next grid on the grid <em>index</em>
+          (<code>best_index_</code>) instead of the bandwidth value, with the step sign flipped. The new grid
+          could contain negative bandwidths, and on bimodal data it picked 0.08 where a fine-grid reference
+          gives about 0.46. The fix re-centers on the selected bandwidth and keeps the grid positive; I
+          checked it against a fine-grid reference. In review, the maintainer built on it directly: the
+          lower edge now searches the next order of magnitude, CV respects sample weights, and the first
+          grid is scaled by each dimension's standard deviation.
+        </p>
+        <a class="project-link" href="https://github.com/sbi-dev/sbi/pull/2061" target="_blank" rel="noopener">View pull request ↗</a>
+        <div class="tags">
+          <span>Python</span><span>Simulation-Based Inference</span><span>Statistics</span>
+        </div>
+      </div>
+    </article>
+
     <h2 class="group-head">All pull requests</h2>
 
     <div class="reading-head pr-head" aria-hidden="true">
