@@ -71,6 +71,8 @@ PRS = [
      "format_value stripped trailing zeros from string categories, so the bar plot showed \"2020\" as 202"),
     ("wxt-dev/wxt", 2602,
      "Create the configured Chromium profile before launch instead of failing when it is missing"),
+    ("tobymao/sqlglot", 8778,
+     "DAYOFWEEK from MySQL/Spark was transpiled to BigQuery as a nonexistent DAY_OF_WEEK function"),
     ("SeekingDream/DLCompilerAttack", 3,
      "Generalized Attacker API so the compiler backdoor attack works on arbitrary models"),
     ("kamillobinski/thock", 107,

@@ -321,6 +321,27 @@
       </div>
     </article>
 
+    <article class="entry">
+      <div>
+        <h2>inspect_ai — dataclass tool parameters that keep their types</h2>
+        <p class="meta">UKGovernmentBEIS/inspect_ai · PR #5746 · Merged Oct 2026</p>
+        <p>
+          When a <code>@tool</code> took a dataclass parameter defined in a module with
+          <code>from __future__ import annotations</code>, the schema builder read <code>Field.type</code>
+          directly, which is an unevaluated string like <code>"int"</code>. The model saw a tool definition
+          with every field untyped, and calling the tool crashed in <code>issubclass("int", BaseModel)</code>.
+          The fix resolves dataclass fields with <code>get_type_hints()</code>, the same way the TypedDict
+          branch already did, and falls back to the raw annotation when resolution fails. In review, the
+          maintainer found that a self-referential dataclass now recursed forever, so the schema builder
+          tracks the classes it is expanding and stops at a cycle.
+        </p>
+        <a class="project-link" href="https://github.com/UKGovernmentBEIS/inspect_ai/pull/5746" target="_blank" rel="noopener">View pull request ↗</a>
+        <div class="tags">
+          <span>Python</span><span>LLM Evaluation</span><span>Type Hints</span>
+        </div>
+      </div>
+    </article>
+
     <h2 class="group-head">All pull requests</h2>
 
     <div class="reading-head pr-head" aria-hidden="true">
@@ -402,6 +423,16 @@
         <span class="status status-merged">Merged</span>
       </li>
       <li>
+        <a class="title" href="https://github.com/UKGovernmentBEIS/inspect_ai/pull/5746" target="_blank" rel="noopener">UKGovernmentBEIS/inspect_ai <span class="pr-num">#5746</span></a>
+        <span class="author">Dataclass tool parameters lost their types under `from __future__ import annotations`</span>
+        <span class="status status-merged">Merged</span>
+      </li>
+      <li>
+        <a class="title" href="https://github.com/wxt-dev/wxt/pull/2602" target="_blank" rel="noopener">wxt-dev/wxt <span class="pr-num">#2602</span></a>
+        <span class="author">Create the configured Chromium profile before launch instead of failing when it is missing</span>
+        <span class="status status-merged">Merged</span>
+      </li>
+      <li>
         <a class="title" href="https://github.com/huggingface/diffusers/pull/14910" target="_blank" rel="noopener">huggingface/diffusers <span class="pr-num">#14910</span></a>
         <span class="author">CFG cutoff callbacks kept one embedding row, breaking num_images_per_prompt &gt; 1 and multi-prompt batches</span>
         <span class="status status-open">Open</span>
@@ -442,11 +473,6 @@
         <span class="status status-open">Open</span>
       </li>
       <li>
-        <a class="title" href="https://github.com/UKGovernmentBEIS/inspect_ai/pull/5746" target="_blank" rel="noopener">UKGovernmentBEIS/inspect_ai <span class="pr-num">#5746</span></a>
-        <span class="author">Dataclass tool parameters lost their types under `from __future__ import annotations`</span>
-        <span class="status status-open">Open</span>
-      </li>
-      <li>
         <a class="title" href="https://github.com/browser-use/browser-use/pull/5986" target="_blank" rel="noopener">browser-use/browser-use <span class="pr-num">#5986</span></a>
         <span class="author">SchemaOptimizer hit RecursionError on self-referential output models; recursive $refs are now kept in $defs</span>
         <span class="status status-open">Open</span>
@@ -457,8 +483,8 @@
         <span class="status status-open">Open</span>
       </li>
       <li>
-        <a class="title" href="https://github.com/wxt-dev/wxt/pull/2602" target="_blank" rel="noopener">wxt-dev/wxt <span class="pr-num">#2602</span></a>
-        <span class="author">Create the configured Chromium profile before launch instead of failing when it is missing</span>
+        <a class="title" href="https://github.com/tobymao/sqlglot/pull/8778" target="_blank" rel="noopener">tobymao/sqlglot <span class="pr-num">#8778</span></a>
+        <span class="author">DAYOFWEEK from MySQL/Spark was transpiled to BigQuery as a nonexistent DAY_OF_WEEK function</span>
         <span class="status status-open">Open</span>
       </li>
       <li>
