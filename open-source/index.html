@@ -342,6 +342,26 @@
       </div>
     </article>
 
+    <article class="entry">
+      <div>
+        <h2>sqlglot — DAYOFWEEK transpiled to valid BigQuery</h2>
+        <p class="meta">tobymao/sqlglot · PR #8778 · Merged Oct 2026</p>
+        <p>
+          Transpiling <code>DAYOFWEEK(x)</code> from MySQL or Spark to BigQuery produced
+          <code>DAY_OF_WEEK(x)</code>, a function BigQuery does not have, so the generated query failed
+          as soon as it ran. The BigQuery generator mapped <code>DayOfMonth</code>, <code>DayOfYear</code>
+          and <code>WeekOfYear</code> to <code>EXTRACT</code> but had no entry for <code>DayOfWeek</code>,
+          so it fell back to the default function name. After checking that all three dialects number
+          days Sunday = 1 through Saturday = 7, the fix maps it to <code>EXTRACT(DAYOFWEEK FROM x)</code>
+          with a regression test.
+        </p>
+        <a class="project-link" href="https://github.com/tobymao/sqlglot/pull/8778" target="_blank" rel="noopener">View pull request ↗</a>
+        <div class="tags">
+          <span>Python</span><span>SQL</span><span>Compilers</span>
+        </div>
+      </div>
+    </article>
+
     <h2 class="group-head">All pull requests</h2>
 
     <div class="reading-head pr-head" aria-hidden="true">
