@@ -75,6 +75,8 @@ PRS = [
      "DAYOFWEEK from MySQL/Spark was transpiled to BigQuery as a nonexistent DAY_OF_WEEK function"),
     ("ibis-project/ibis", 12204,
      "Out-of-range table slices like t[-20:] produced a negative OFFSET/LIMIT that DuckDB rejected"),
+    ("scikit-hep/hist", 744,
+     "Wildcard string indexes after an Ellipsis, like h[..., \"a*\"], were matched against the wrong axis"),
     ("SeekingDream/DLCompilerAttack", 3,
      "Generalized Attacker API so the compiler backdoor attack works on arbitrary models"),
     ("kamillobinski/thock", 107,

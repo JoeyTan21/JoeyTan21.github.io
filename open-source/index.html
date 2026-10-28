@@ -362,6 +362,25 @@
       </div>
     </article>
 
+    <article class="entry">
+      <div>
+        <h2>hist — Ellipsis-aware wildcard indexing</h2>
+        <p class="meta">scikit-hep/hist · PR #744 · Merged Oct 2026</p>
+        <p>
+          String category indexes support wildcards, but when they came after an Ellipsis, as in
+          <code>h[..., "a*"]</code>, the pattern was resolved against the wrong axis. Depending on the
+          histogram this silently selected the wrong bins, raised "No matches found", or failed with an
+          IndexError on 1D histograms. The index transform used the position inside the index tuple as
+          the axis number, which stops being true once an Ellipsis expands to several axes. The fix shifts
+          positions after the Ellipsis by <code>ndim - len(index)</code>, with tests for each case.
+        </p>
+        <a class="project-link" href="https://github.com/scikit-hep/hist/pull/744" target="_blank" rel="noopener">View pull request ↗</a>
+        <div class="tags">
+          <span>Python</span><span>Scientific Computing</span><span>Indexing</span>
+        </div>
+      </div>
+    </article>
+
     <h2 class="group-head">All pull requests</h2>
 
     <div class="reading-head pr-head" aria-hidden="true">
@@ -455,6 +474,11 @@
       <li>
         <a class="title" href="https://github.com/tobymao/sqlglot/pull/8778" target="_blank" rel="noopener">tobymao/sqlglot <span class="pr-num">#8778</span></a>
         <span class="author">DAYOFWEEK from MySQL/Spark was transpiled to BigQuery as a nonexistent DAY_OF_WEEK function</span>
+        <span class="status status-merged">Merged</span>
+      </li>
+      <li>
+        <a class="title" href="https://github.com/scikit-hep/hist/pull/744" target="_blank" rel="noopener">scikit-hep/hist <span class="pr-num">#744</span></a>
+        <span class="author">Wildcard string indexes after an Ellipsis, like h[..., &quot;a*&quot;], were matched against the wrong axis</span>
         <span class="status status-merged">Merged</span>
       </li>
       <li>
