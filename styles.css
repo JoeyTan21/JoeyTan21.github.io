@@ -443,41 +443,83 @@ a {
   border-color: #aaa;
 }
 
-/* ---- open-source: headline stats + repo list ---- */
+/* ---- open-source: funnel (issues -> PRs -> merged) + repo list ---- */
 
-.oss-stats {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.oss-funnel {
+  padding: clamp(1.5rem, 4vw, 2.5rem) var(--pad) 0;
   border-bottom: var(--rule);
 }
 
-.oss-stats .stat {
-  display: flex;
-  flex-direction: column;
-  padding: clamp(1.5rem, 4vw, 2.5rem) var(--pad);
+/* The track is 100% = issues filed. Each layer sits on top, from the left
+   edge, with an inline width set by the build script (its share of issues). */
+.funnel-bar {
+  position: relative;
+  height: 2rem;
+  background: #e4e4e4;
 }
 
-.oss-stats .stat + .stat {
-  border-left: var(--rule);
+.funnel-bar .layer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  border-right: 2px solid var(--paper); /* white gap so the layers read apart */
 }
 
-.oss-stats .stat-num {
-  font-size: clamp(3.5rem, 12vw, 7rem);
-  font-weight: 700;
-  line-height: 0.9;
-  letter-spacing: -0.04em;
+.funnel-bar .layer-prs,
+.swatch-prs {
+  background: #8a8a8a;
 }
 
-.oss-stats .stat-label {
-  margin-top: 0.9rem;
+.funnel-bar .layer-merged,
+.swatch-merged {
+  background: var(--ink);
+}
+
+.swatch-issues {
+  background: #e4e4e4;
+}
+
+.funnel-key {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.funnel-key dt {
   font-family: var(--mono);
-  font-size: 0.75rem;
-  letter-spacing: 0.1em;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
-.oss-stats .stat-note {
-  grid-column: 1 / -1;
+.funnel-key .swatch {
+  display: inline-block;
+  width: 0.7rem;
+  height: 0.7rem;
+  margin-right: 0.5rem;
+  vertical-align: -0.05em;
+}
+
+.funnel-key .num {
+  margin-top: 0.4rem;
+  font-size: clamp(2.25rem, 6vw, 3.75rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.funnel-key .pct {
+  margin-top: 0.4rem;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
+  color: #555;
+}
+
+.oss-funnel .stat-note {
+  margin: clamp(1.5rem, 4vw, 2.5rem) calc(-1 * var(--pad)) 0;
   padding: 0.55rem var(--pad);
   border-top: var(--rule);
   font-family: var(--mono);
@@ -609,15 +651,18 @@ a {
     align-self: center;
   }
 
-  /* one column of stats and repos; drop the vertical rules */
-  .oss-stats,
+  /* one column of repos; drop the vertical rule */
   .repo-list {
     grid-template-columns: 1fr;
   }
 
-  .oss-stats .stat + .stat {
-    border-left: 0;
-    border-top: var(--rule);
+  .funnel-key {
+    gap: 0.75rem;
+  }
+
+  /* labels wrap to two lines here; reserve that height so the numbers align */
+  .funnel-key dt {
+    min-height: 2.2em;
   }
 
   .repo-list li:nth-child(odd) {

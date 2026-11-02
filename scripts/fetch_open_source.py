@@ -7,6 +7,8 @@ What it does, in order:
      USERNAME in repositories USERNAME does not own.
   2. Ask the search API for star counts and descriptions of those repositories
      (a few repos per request, so ~20 repos cost ~3 requests).
+     Also ask it for three totals: issues filed, PRs opened, PRs still open
+     (one request each; only `total_count` is read).
   3. Save the result to data/open-source.json (the committed cache).
      If any network step fails, load the cached JSON instead so the site
      still builds.
@@ -113,8 +115,17 @@ def fetch_repo_info(repo_names: list[str]) -> dict[str, dict]:
     return info
 
 
+def search_count(qualifiers: str) -> int:
+    """How many items match a search, without downloading them.
+
+    `per_page=1` keeps the response tiny; we only read `total_count`.
+    """
+    query = f"{qualifiers} author:{USERNAME} -user:{USERNAME}"
+    return github_get("/search/issues", {"q": query, "per_page": 1})["total_count"]
+
+
 def build_snapshot() -> dict:
-    """Combine PRs and repo metadata into the JSON shape the renderer uses."""
+    """Combine PRs, repo metadata and funnel totals into the JSON the renderer uses."""
     prs = fetch_merged_prs()
     by_repo = defaultdict(list)
     for pr in prs:
@@ -139,6 +150,10 @@ def build_snapshot() -> dict:
         "username": USERNAME,
         "merged_pr_count": len(prs),
         "repo_count": len(repos),
+        # The funnel: issues I filed -> PRs I opened -> PRs that got merged.
+        "issue_count": search_count("is:issue"),
+        "pr_count": search_count("is:pr"),
+        "open_pr_count": search_count("is:pr is:open"),
         "repos": repos,
     }
 
@@ -185,18 +200,41 @@ def render_home_banner(data: dict) -> str:
     )
 
 
+def pct(part: int, whole: int) -> float:
+    """Share as a percentage, 0 when the denominator is 0."""
+    return 100 * part / whole if whole else 0
+
+
 def render_oss_section(data: dict) -> str:
-    """Headline stats plus the per-repository list for the Open Source page."""
+    """Funnel bar (issues -> PRs -> merged) plus the per-repository list."""
     updated = datetime.strptime(data["generated_at"], "%Y-%m-%dT%H:%M:%SZ").strftime("%-d %b %Y")
+    issues, prs, merged = data["issue_count"], data["pr_count"], data["merged_pr_count"]
+    pr_share, merged_share = pct(prs, issues), pct(merged, issues)
     out = [
         "",
-        '    <section class="oss-stats" aria-label="Open-source summary">',
-        f'      <div class="stat"><span class="stat-num">{data["merged_pr_count"]}</span>'
-        '<span class="stat-label">Merged pull requests</span></div>',
-        f'      <div class="stat"><span class="stat-num">{data["repo_count"]}</span>'
-        '<span class="stat-label">Projects contributed to</span></div>',
-        f'      <p class="stat-note">Merged PRs to repositories I don’t own · '
-        f'from the GitHub API · updated {updated}</p>',
+        '    <section class="oss-funnel" aria-label="Open-source summary">',
+        # One bar: the full track is every issue I filed; the two layers inside
+        # it start from the same left edge, scaled to their share of issues.
+        '      <div class="funnel-bar" role="img" '
+        f'aria-label="{issues} issues filed, {prs} pull requests opened ({pr_share:.0f}%), '
+        f'{merged} merged ({merged_share:.0f}%)">',
+        f'        <div class="layer layer-prs" style="width: {pr_share:.1f}%" '
+        f'title="{prs} pull requests · {pr_share:.0f}% of issues"></div>',
+        f'        <div class="layer layer-merged" style="width: {merged_share:.1f}%" '
+        f'title="{merged} merged · {merged_share:.0f}% of issues"></div>',
+        "      </div>",
+        # The key doubles as the legend and the table of numbers.
+        '      <dl class="funnel-key">',
+        '        <div><dt><span class="swatch swatch-issues"></span>Issues filed</dt>'
+        f'<dd class="num">{issues}</dd><dd class="pct">bugs found &amp; reproduced</dd></div>',
+        '        <div><dt><span class="swatch swatch-prs"></span>Pull requests</dt>'
+        f'<dd class="num">{prs}</dd><dd class="pct">{pr_share:.0f}% of issues</dd></div>',
+        '        <div><dt><span class="swatch swatch-merged"></span>Merged</dt>'
+        f'<dd class="num">{merged}</dd><dd class="pct">{merged_share:.0f}% of issues · '
+        f'{pct(merged, prs):.0f}% of PRs</dd></div>',
+        "      </dl>",
+        f'      <p class="stat-note">Across {data["repo_count"]} repositories I don’t own '
+        f'· {data["open_pr_count"]} PRs still open · from the GitHub API · updated {updated}</p>',
         "    </section>",
         "",
         '    <h2 class="group-head">By repository · sorted by stars</h2>',
