@@ -1,0 +1,274 @@
+{
+  "generated_at": "2026-11-02T15:04:49Z",
+  "username": "JoeyTan21",
+  "merged_pr_count": 19,
+  "repo_count": 19,
+  "repos": [
+    {
+      "name": "huggingface/transformers",
+      "url": "https://github.com/huggingface/transformers",
+      "stars": 168447,
+      "description": "🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training. ",
+      "prs": [
+        {
+          "number": 49136,
+          "title": "Fix get_json_schema dropping items/enum for unions of list/dict/Literal types",
+          "url": "https://github.com/huggingface/transformers/pull/49136",
+          "merged_at": "2026-09-28T14:58:16Z"
+        }
+      ]
+    },
+    {
+      "name": "docling-project/docling",
+      "url": "https://github.com/docling-project/docling",
+      "stars": 70010,
+      "description": "Get your documents ready for gen AI",
+      "prs": [
+        {
+          "number": 4430,
+          "title": "fix: detect the format of path inputs with an upper-case extension",
+          "url": "https://github.com/docling-project/docling/pull/4430",
+          "merged_at": "2026-10-01T09:46:09Z"
+        }
+      ]
+    },
+    {
+      "name": "mlflow/mlflow",
+      "url": "https://github.com/mlflow/mlflow",
+      "stars": 28630,
+      "description": "The open source AI engineering platform for agents, LLMs, and ML models. MLflow enables teams of all sizes to debug, evaluate, monitor, and optimize production-quality AI applications while controlling costs and managing access to models and data.",
+      "prs": [
+        {
+          "number": 26260,
+          "title": "Make schema `_merge` with `AnyType` order-independent",
+          "url": "https://github.com/mlflow/mlflow/pull/26260",
+          "merged_at": "2026-09-30T15:55:15Z"
+        }
+      ]
+    },
+    {
+      "name": "huggingface/datasets",
+      "url": "https://github.com/huggingface/datasets",
+      "stars": 22104,
+      "description": "🤗 The largest hub of ready-to-use datasets for AI models with fast, easy-to-use and efficient data manipulation tools",
+      "prs": [
+        {
+          "number": 8701,
+          "title": "Implement __arrow_array__ on PandasArrayExtensionArray so ArrayXD columns can go back from pandas to Arrow",
+          "url": "https://github.com/huggingface/datasets/pull/8701",
+          "merged_at": "2026-10-05T12:49:37Z"
+        }
+      ]
+    },
+    {
+      "name": "pydantic/pydantic-ai",
+      "url": "https://github.com/pydantic/pydantic-ai",
+      "stars": 20997,
+      "description": "How Python does AI. Agents, realtime voice, image generation, embeddings. Every model, every interface, typed end to end.",
+      "prs": [
+        {
+          "number": 8848,
+          "title": "Treat `application/toml` as text-like for inline model inputs",
+          "url": "https://github.com/pydantic/pydantic-ai/pull/8848",
+          "merged_at": "2026-09-28T15:49:05Z"
+        }
+      ]
+    },
+    {
+      "name": "huggingface/trl",
+      "url": "https://github.com/huggingface/trl",
+      "stars": 19659,
+      "description": "Train transformer language models with reinforcement learning.",
+      "prs": [
+        {
+          "number": 7446,
+          "title": "Fix SFTTrainer not appending EOS when `dataset_text_field` is not `\"text\"`",
+          "url": "https://github.com/huggingface/trl/pull/7446",
+          "merged_at": "2026-09-30T15:29:35Z"
+        }
+      ]
+    },
+    {
+      "name": "huggingface/sentence-transformers",
+      "url": "https://github.com/huggingface/sentence-transformers",
+      "stars": 19247,
+      "description": "State-of-the-Art Embeddings, Retrieval, and Reranking",
+      "prs": [
+        {
+          "number": 4108,
+          "title": "Apply model2vec token mapping and weights when loading StaticEmbedding",
+          "url": "https://github.com/huggingface/sentence-transformers/pull/4108",
+          "merged_at": "2026-10-08T06:44:42Z"
+        }
+      ]
+    },
+    {
+      "name": "wxt-dev/wxt",
+      "url": "https://github.com/wxt-dev/wxt",
+      "stars": 10687,
+      "description": "⚡ Next-gen Web Extension Framework",
+      "prs": [
+        {
+          "number": 2602,
+          "title": "fix: create missing Chromium profile before launch",
+          "url": "https://github.com/wxt-dev/wxt/pull/2602",
+          "merged_at": "2026-10-23T18:29:41Z"
+        }
+      ]
+    },
+    {
+      "name": "huggingface/accelerate",
+      "url": "https://github.com/huggingface/accelerate",
+      "stars": 9935,
+      "description": "🚀 A simple way to launch, train, and use PyTorch models on almost any device and distributed configuration, automatic mixed precision (including fp8), and easy-to-configure FSDP and DeepSpeed support",
+      "prs": [
+        {
+          "number": 4354,
+          "title": "Fix wait_for_everyone() crashing on MULTI_CPU when the machine has an accelerator",
+          "url": "https://github.com/huggingface/accelerate/pull/4354",
+          "merged_at": "2026-10-01T13:09:09Z"
+        }
+      ]
+    },
+    {
+      "name": "tobymao/sqlglot",
+      "url": "https://github.com/tobymao/sqlglot",
+      "stars": 9749,
+      "description": "Python SQL Parser and Transpiler",
+      "prs": [
+        {
+          "number": 8778,
+          "title": "fix(bigquery): generate EXTRACT(DAYOFWEEK FROM ...) for DayOfWeek [CLAUDE]",
+          "url": "https://github.com/tobymao/sqlglot/pull/8778",
+          "merged_at": "2026-10-26T00:37:37Z"
+        }
+      ]
+    },
+    {
+      "name": "unit8co/darts",
+      "url": "https://github.com/unit8co/darts",
+      "stars": 9573,
+      "description": "A python library for user-friendly forecasting and anomaly detection on time series.",
+      "prs": [
+        {
+          "number": 3251,
+          "title": "Fix QuantileDetector and IQRDetector thresholds with missing values",
+          "url": "https://github.com/unit8co/darts/pull/3251",
+          "merged_at": "2026-10-12T11:01:18Z"
+        }
+      ]
+    },
+    {
+      "name": "py-why/dowhy",
+      "url": "https://github.com/py-why/dowhy",
+      "stars": 8385,
+      "description": "DoWhy is a Python library for causal inference that supports explicit modeling and testing of causal assumptions. DoWhy is based on a unified language for causal inference, combining causal graphical models and potential outcomes frameworks. ",
+      "prs": [
+        {
+          "number": 1842,
+          "title": "Fix daggity_to_dot mangling node names that contain Dagitty keywords",
+          "url": "https://github.com/py-why/dowhy/pull/1842",
+          "merged_at": "2026-11-02T05:07:44Z"
+        }
+      ]
+    },
+    {
+      "name": "pydantic/logfire",
+      "url": "https://github.com/pydantic/logfire",
+      "stars": 4529,
+      "description": "AI observability platform for production LLM and agent systems.",
+      "prs": [
+        {
+          "number": 2502,
+          "title": "Convert span attribute ints below the int64 minimum to strings",
+          "url": "https://github.com/pydantic/logfire/pull/2502",
+          "merged_at": "2026-10-08T16:47:40Z"
+        }
+      ]
+    },
+    {
+      "name": "TransformerLensOrg/TransformerLens",
+      "url": "https://github.com/TransformerLensOrg/TransformerLens",
+      "stars": 4031,
+      "description": "A library for mechanistic interpretability of GPT-style language models",
+      "prs": [
+        {
+          "number": 1859,
+          "title": "fix(bridge): slice pos before dropping batch dim in get_caching_hooks",
+          "url": "https://github.com/TransformerLensOrg/TransformerLens/pull/1859",
+          "merged_at": "2026-10-07T17:30:22Z"
+        }
+      ]
+    },
+    {
+      "name": "UKGovernmentBEIS/inspect_ai",
+      "url": "https://github.com/UKGovernmentBEIS/inspect_ai",
+      "stars": 3156,
+      "description": "Inspect: A framework for large language model evaluations",
+      "prs": [
+        {
+          "number": 5746,
+          "title": "fix: dataclass tool parameters losing their types under `from __future__ import annotations`",
+          "url": "https://github.com/UKGovernmentBEIS/inspect_ai/pull/5746",
+          "merged_at": "2026-10-23T22:58:07Z"
+        }
+      ]
+    },
+    {
+      "name": "narwhals-dev/narwhals",
+      "url": "https://github.com/narwhals-dev/narwhals",
+      "stars": 1746,
+      "description": "Lightweight and extensible compatibility layer between dataframe libraries!",
+      "prs": [
+        {
+          "number": 4085,
+          "title": "fix: treat non-ASCII letters as word characters in `str.to_titlecase` on DuckDB, Spark-like and old polars",
+          "url": "https://github.com/narwhals-dev/narwhals/pull/4085",
+          "merged_at": "2026-10-19T07:29:52Z"
+        }
+      ]
+    },
+    {
+      "name": "scikit-hep/awkward",
+      "url": "https://github.com/scikit-hep/awkward",
+      "stars": 988,
+      "description": "Manipulate JSON-like data with NumPy-like idioms.",
+      "prs": [
+        {
+          "number": 4433,
+          "title": "fix: ak.mean/var/std on boolean typetracer arrays",
+          "url": "https://github.com/scikit-hep/awkward/pull/4433",
+          "merged_at": "2026-10-17T19:05:34Z"
+        }
+      ]
+    },
+    {
+      "name": "sbi-dev/sbi",
+      "url": "https://github.com/sbi-dev/sbi",
+      "stars": 882,
+      "description": "sbi is a Python package for simulation-based inference, designed to meet the needs of both researchers and practitioners. Whether you need fine-grained control or an easy-to-use interface, sbi has you covered.",
+      "prs": [
+        {
+          "number": 2061,
+          "title": "fix: shift the KDE cross-validation grid by bandwidth, not by grid index",
+          "url": "https://github.com/sbi-dev/sbi/pull/2061",
+          "merged_at": "2026-10-22T07:39:44Z"
+        }
+      ]
+    },
+    {
+      "name": "scikit-hep/hist",
+      "url": "https://github.com/scikit-hep/hist",
+      "stars": 139,
+      "description": "Histogramming for analysis powered by boost-histogram",
+      "prs": [
+        {
+          "number": 744,
+          "title": "fix: resolve wildcard category selections after an Ellipsis",
+          "url": "https://github.com/scikit-hep/hist/pull/744",
+          "merged_at": "2026-10-28T12:50:42Z"
+        }
+      ]
+    }
+  ]
+}
