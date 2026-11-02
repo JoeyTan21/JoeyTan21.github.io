@@ -1,8 +1,11 @@
 {
-  "generated_at": "2026-11-02T15:04:49Z",
+  "generated_at": "2026-11-02T15:39:32Z",
   "username": "JoeyTan21",
   "merged_pr_count": 19,
   "repo_count": 19,
+  "issue_count": 87,
+  "pr_count": 39,
+  "open_pr_count": 17,
   "repos": [
     {
       "name": "huggingface/transformers",
@@ -21,7 +24,7 @@
     {
       "name": "docling-project/docling",
       "url": "https://github.com/docling-project/docling",
-      "stars": 70010,
+      "stars": 70011,
       "description": "Get your documents ready for gen AI",
       "prs": [
         {
@@ -35,7 +38,7 @@
     {
       "name": "mlflow/mlflow",
       "url": "https://github.com/mlflow/mlflow",
-      "stars": 28630,
+      "stars": 28631,
       "description": "The open source AI engineering platform for agents, LLMs, and ML models. MLflow enables teams of all sizes to debug, evaluate, monitor, and optimize production-quality AI applications while controlling costs and managing access to models and data.",
       "prs": [
         {
