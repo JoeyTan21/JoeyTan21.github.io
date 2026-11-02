@@ -91,11 +91,22 @@ a {
 }
 
 .intro-card {
+  display: block;
   padding: 1.25rem 1.5rem;
   background: #f1f1f1;
   border-radius: 0.75rem;
   text-align: center;
   font-size: clamp(1rem, 2vw, 1.2rem);
+  text-wrap: balance;
+}
+
+.intro-card:hover,
+.intro-card:focus-visible {
+  background: #e6e6e6;
+}
+
+.intro-card strong {
+  font-weight: 700;
 }
 
 .identity {
@@ -147,6 +158,16 @@ a {
   color: #555;
   font-size: clamp(1rem, 2vw, 1.2rem);
   line-height: 1.55;
+}
+
+.brief-intro .tagline a {
+  color: var(--ink);
+  border-bottom: 1px solid var(--ink);
+}
+
+.brief-intro .tagline a:hover {
+  background: var(--ink);
+  color: var(--paper);
 }
 
 .section-placeholder {
@@ -422,6 +443,129 @@ a {
   border-color: #aaa;
 }
 
+/* ---- open-source: headline stats + repo list ---- */
+
+.oss-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: var(--rule);
+}
+
+.oss-stats .stat {
+  display: flex;
+  flex-direction: column;
+  padding: clamp(1.5rem, 4vw, 2.5rem) var(--pad);
+}
+
+.oss-stats .stat + .stat {
+  border-left: var(--rule);
+}
+
+.oss-stats .stat-num {
+  font-size: clamp(3.5rem, 12vw, 7rem);
+  font-weight: 700;
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+}
+
+.oss-stats .stat-label {
+  margin-top: 0.9rem;
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.oss-stats .stat-note {
+  grid-column: 1 / -1;
+  padding: 0.55rem var(--pad);
+  border-top: var(--rule);
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #555;
+}
+
+.repo-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.repo-list li {
+  padding: 1.5rem var(--pad);
+  border-bottom: var(--rule);
+}
+
+.repo-list li:nth-child(odd) {
+  border-right: var(--rule);
+}
+
+.repo-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.repo-name {
+  font-size: clamp(1.05rem, 2.5vw, 1.3rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  word-break: break-word;
+}
+
+.repo-name:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.repo-stars {
+  flex-shrink: 0;
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+}
+
+.repo-desc {
+  margin-top: 0.5rem;
+  max-width: 55ch;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.repo-desc:empty {
+  display: none;
+}
+
+.repo-prs {
+  margin-top: 0.85rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.repo-prs span {
+  margin-right: 0.35rem;
+  color: #555;
+}
+
+.repo-prs a {
+  border: var(--rule);
+  padding: 0.15rem 0.45rem;
+}
+
+.repo-prs a:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+
 /* ---- footer ---- */
 
 .site-footer {
@@ -463,5 +607,20 @@ a {
     grid-column: 2;
     grid-row: 1 / span 2;
     align-self: center;
+  }
+
+  /* one column of stats and repos; drop the vertical rules */
+  .oss-stats,
+  .repo-list {
+    grid-template-columns: 1fr;
+  }
+
+  .oss-stats .stat + .stat {
+    border-left: 0;
+    border-top: var(--rule);
+  }
+
+  .repo-list li:nth-child(odd) {
+    border-right: 0;
   }
 }
