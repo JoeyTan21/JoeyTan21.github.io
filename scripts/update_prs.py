@@ -81,6 +81,8 @@ PRS = [
      "Slices with a negative step and negative stop, like x[:-1:-1], returned the wrong elements"),
     ("optimagic-dev/optimagic", 730,
      "List or tuple bounds raised AttributeError on the 1d-array fast path of the parameter converter"),
+    ("arviz-devs/arviz-stats", 545,
+     "loo(mixture=True) raised AxisError when the observation dim came before chain/draw"),
     ("SeekingDream/DLCompilerAttack", 3,
      "Generalized Attacker API so the compiler backdoor attack works on arbitrary models"),
     ("kamillobinski/thock", 107,
