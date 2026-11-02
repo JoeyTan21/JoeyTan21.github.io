@@ -662,7 +662,7 @@ a {
 
   /* labels wrap to two lines here; reserve that height so the numbers align */
   .funnel-key dt {
-    min-height: 2.2em;
+    min-height: 3em; /* two lines at line-height 1.5 */
   }
 
   .repo-list li:nth-child(odd) {
