@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-11-03T16:10:10Z",
+  "generated_at": "2026-11-04T16:49:25Z",
   "username": "JoeyTan21",
-  "merged_pr_count": 20,
-  "repo_count": 20,
-  "issue_count": 87,
+  "merged_pr_count": 21,
+  "repo_count": 21,
+  "issue_count": 89,
   "pr_count": 39,
-  "open_pr_count": 16,
+  "open_pr_count": 15,
   "repos": [
     {
       "name": "huggingface/transformers",
       "url": "https://github.com/huggingface/transformers",
-      "stars": 168491,
+      "stars": 168536,
       "description": "🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training. ",
       "prs": [
         {
@@ -24,7 +24,7 @@
     {
       "name": "docling-project/docling",
       "url": "https://github.com/docling-project/docling",
-      "stars": 70063,
+      "stars": 70103,
       "description": "Get your documents ready for gen AI",
       "prs": [
         {
@@ -38,7 +38,7 @@
     {
       "name": "mlflow/mlflow",
       "url": "https://github.com/mlflow/mlflow",
-      "stars": 28647,
+      "stars": 28657,
       "description": "The open source AI engineering platform for agents, LLMs, and ML models. MLflow enables teams of all sizes to debug, evaluate, monitor, and optimize production-quality AI applications while controlling costs and managing access to models and data.",
       "prs": [
         {
@@ -52,7 +52,7 @@
     {
       "name": "huggingface/datasets",
       "url": "https://github.com/huggingface/datasets",
-      "stars": 22106,
+      "stars": 22113,
       "description": "🤗 The largest hub of ready-to-use datasets for AI models with fast, easy-to-use and efficient data manipulation tools",
       "prs": [
         {
@@ -66,7 +66,7 @@
     {
       "name": "pydantic/pydantic-ai",
       "url": "https://github.com/pydantic/pydantic-ai",
-      "stars": 21010,
+      "stars": 21023,
       "description": "How Python does AI. Agents, realtime voice, image generation, embeddings. Every model, every interface, typed end to end.",
       "prs": [
         {
@@ -80,7 +80,7 @@
     {
       "name": "huggingface/trl",
       "url": "https://github.com/huggingface/trl",
-      "stars": 19663,
+      "stars": 19669,
       "description": "Train transformer language models with reinforcement learning.",
       "prs": [
         {
@@ -94,7 +94,7 @@
     {
       "name": "huggingface/sentence-transformers",
       "url": "https://github.com/huggingface/sentence-transformers",
-      "stars": 19251,
+      "stars": 19255,
       "description": "State-of-the-Art Embeddings, Retrieval, and Reranking",
       "prs": [
         {
@@ -108,7 +108,7 @@
     {
       "name": "wxt-dev/wxt",
       "url": "https://github.com/wxt-dev/wxt",
-      "stars": 10691,
+      "stars": 10697,
       "description": "⚡ Next-gen Web Extension Framework",
       "prs": [
         {
@@ -136,7 +136,7 @@
     {
       "name": "tobymao/sqlglot",
       "url": "https://github.com/tobymao/sqlglot",
-      "stars": 9750,
+      "stars": 9758,
       "description": "Python SQL Parser and Transpiler",
       "prs": [
         {
@@ -164,7 +164,7 @@
     {
       "name": "py-why/dowhy",
       "url": "https://github.com/py-why/dowhy",
-      "stars": 8386,
+      "stars": 8387,
       "description": "DoWhy is a Python library for causal inference that supports explicit modeling and testing of causal assumptions. DoWhy is based on a unified language for causal inference, combining causal graphical models and potential outcomes frameworks. ",
       "prs": [
         {
@@ -178,7 +178,7 @@
     {
       "name": "holoviz/panel",
       "url": "https://github.com/holoviz/panel",
-      "stars": 5817,
+      "stars": 5818,
       "description": "Panel: The powerful data exploration & web app framework for Python",
       "prs": [
         {
@@ -192,7 +192,7 @@
     {
       "name": "pydantic/logfire",
       "url": "https://github.com/pydantic/logfire",
-      "stars": 4532,
+      "stars": 4535,
       "description": "AI observability platform for production LLM and agent systems.",
       "prs": [
         {
@@ -206,7 +206,7 @@
     {
       "name": "TransformerLensOrg/TransformerLens",
       "url": "https://github.com/TransformerLensOrg/TransformerLens",
-      "stars": 4035,
+      "stars": 4039,
       "description": "A library for mechanistic interpretability of GPT-style language models",
       "prs": [
         {
@@ -220,7 +220,7 @@
     {
       "name": "UKGovernmentBEIS/inspect_ai",
       "url": "https://github.com/UKGovernmentBEIS/inspect_ai",
-      "stars": 3158,
+      "stars": 3169,
       "description": "Inspect: A framework for large language model evaluations",
       "prs": [
         {
@@ -248,7 +248,7 @@
     {
       "name": "scikit-hep/awkward",
       "url": "https://github.com/scikit-hep/awkward",
-      "stars": 988,
+      "stars": 989,
       "description": "Manipulate JSON-like data with NumPy-like idioms.",
       "prs": [
         {
@@ -270,6 +270,20 @@
           "title": "fix: shift the KDE cross-validation grid by bandwidth, not by grid index",
           "url": "https://github.com/sbi-dev/sbi/pull/2061",
           "merged_at": "2026-10-22T07:39:44Z"
+        }
+      ]
+    },
+    {
+      "name": "optimagic-dev/optimagic",
+      "url": "https://github.com/optimagic-dev/optimagic",
+      "stars": 323,
+      "description": "optimagic is a Python package for numerical optimization. It is a unified interface to optimizers from SciPy, NlOpt and other packages.  optimagic's minimize function works just like SciPy's, so you don't have to adjust your code. You simply get more optimizers for free. On top you get diagnostic tools, parallel numerical derivatives and more.",
+      "prs": [
+        {
+          "number": 730,
+          "title": "Process bounds via get_internal_bounds on the converter fast path",
+          "url": "https://github.com/optimagic-dev/optimagic/pull/730",
+          "merged_at": "2026-11-04T15:57:16Z"
         }
       ]
     },
