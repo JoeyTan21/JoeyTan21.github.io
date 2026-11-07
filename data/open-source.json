@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-11-05T18:38:41Z",
+  "generated_at": "2026-11-07T15:54:34Z",
   "username": "JoeyTan21",
-  "merged_pr_count": 23,
-  "repo_count": 22,
-  "issue_count": 90,
-  "pr_count": 41,
-  "open_pr_count": 15,
+  "merged_pr_count": 24,
+  "repo_count": 23,
+  "issue_count": 92,
+  "pr_count": 45,
+  "open_pr_count": 18,
   "repos": [
     {
       "name": "huggingface/transformers",
       "url": "https://github.com/huggingface/transformers",
-      "stars": 168574,
+      "stars": 168622,
       "description": "🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training. ",
       "prs": [
         {
@@ -24,7 +24,7 @@
     {
       "name": "docling-project/docling",
       "url": "https://github.com/docling-project/docling",
-      "stars": 70159,
+      "stars": 70250,
       "description": "Get your documents ready for gen AI",
       "prs": [
         {
@@ -38,7 +38,7 @@
     {
       "name": "mlflow/mlflow",
       "url": "https://github.com/mlflow/mlflow",
-      "stars": 28693,
+      "stars": 28716,
       "description": "The open source AI engineering platform for agents, LLMs, and ML models. MLflow enables teams of all sizes to debug, evaluate, monitor, and optimize production-quality AI applications while controlling costs and managing access to models and data.",
       "prs": [
         {
@@ -72,7 +72,7 @@
     {
       "name": "pydantic/pydantic-ai",
       "url": "https://github.com/pydantic/pydantic-ai",
-      "stars": 21039,
+      "stars": 21073,
       "description": "How Python does AI. Agents, realtime voice, image generation, embeddings. Every model, every interface, typed end to end.",
       "prs": [
         {
@@ -86,7 +86,7 @@
     {
       "name": "huggingface/trl",
       "url": "https://github.com/huggingface/trl",
-      "stars": 19675,
+      "stars": 19684,
       "description": "Train transformer language models with reinforcement learning.",
       "prs": [
         {
@@ -100,7 +100,7 @@
     {
       "name": "huggingface/sentence-transformers",
       "url": "https://github.com/huggingface/sentence-transformers",
-      "stars": 19258,
+      "stars": 19266,
       "description": "State-of-the-Art Embeddings, Retrieval, and Reranking",
       "prs": [
         {
@@ -114,7 +114,7 @@
     {
       "name": "wxt-dev/wxt",
       "url": "https://github.com/wxt-dev/wxt",
-      "stars": 10704,
+      "stars": 10710,
       "description": "⚡ Next-gen Web Extension Framework",
       "prs": [
         {
@@ -128,7 +128,7 @@
     {
       "name": "huggingface/accelerate",
       "url": "https://github.com/huggingface/accelerate",
-      "stars": 9935,
+      "stars": 9936,
       "description": "🚀 A simple way to launch, train, and use PyTorch models on almost any device and distributed configuration, automatic mixed precision (including fp8), and easy-to-configure FSDP and DeepSpeed support",
       "prs": [
         {
@@ -142,7 +142,7 @@
     {
       "name": "tobymao/sqlglot",
       "url": "https://github.com/tobymao/sqlglot",
-      "stars": 9762,
+      "stars": 9766,
       "description": "Python SQL Parser and Transpiler",
       "prs": [
         {
@@ -156,7 +156,7 @@
     {
       "name": "unit8co/darts",
       "url": "https://github.com/unit8co/darts",
-      "stars": 9575,
+      "stars": 9578,
       "description": "A python library for user-friendly forecasting and anomaly detection on time series.",
       "prs": [
         {
@@ -170,7 +170,7 @@
     {
       "name": "py-why/dowhy",
       "url": "https://github.com/py-why/dowhy",
-      "stars": 8388,
+      "stars": 8393,
       "description": "DoWhy is a Python library for causal inference that supports explicit modeling and testing of causal assumptions. DoWhy is based on a unified language for causal inference, combining causal graphical models and potential outcomes frameworks. ",
       "prs": [
         {
@@ -184,7 +184,7 @@
     {
       "name": "holoviz/panel",
       "url": "https://github.com/holoviz/panel",
-      "stars": 5819,
+      "stars": 5821,
       "description": "Panel: The powerful data exploration & web app framework for Python",
       "prs": [
         {
@@ -198,7 +198,7 @@
     {
       "name": "pydantic/logfire",
       "url": "https://github.com/pydantic/logfire",
-      "stars": 4536,
+      "stars": 4537,
       "description": "AI observability platform for production LLM and agent systems.",
       "prs": [
         {
@@ -212,7 +212,7 @@
     {
       "name": "TransformerLensOrg/TransformerLens",
       "url": "https://github.com/TransformerLensOrg/TransformerLens",
-      "stars": 4045,
+      "stars": 4053,
       "description": "A library for mechanistic interpretability of GPT-style language models",
       "prs": [
         {
@@ -226,7 +226,7 @@
     {
       "name": "UKGovernmentBEIS/inspect_ai",
       "url": "https://github.com/UKGovernmentBEIS/inspect_ai",
-      "stars": 3186,
+      "stars": 3198,
       "description": "Inspect: A framework for large language model evaluations",
       "prs": [
         {
@@ -252,6 +252,20 @@
       ]
     },
     {
+      "name": "skrub-data/skrub",
+      "url": "https://github.com/skrub-data/skrub",
+      "stars": 1669,
+      "description": "Machine learning with dataframes",
+      "prs": [
+        {
+          "number": 2337,
+          "title": "FIX - SessionEncoder: do not truncate sub-second gaps with polars",
+          "url": "https://github.com/skrub-data/skrub/pull/2337",
+          "merged_at": "2026-11-06T23:58:32Z"
+        }
+      ]
+    },
+    {
       "name": "scikit-hep/awkward",
       "url": "https://github.com/scikit-hep/awkward",
       "stars": 989,
@@ -268,7 +282,7 @@
     {
       "name": "sbi-dev/sbi",
       "url": "https://github.com/sbi-dev/sbi",
-      "stars": 882,
+      "stars": 883,
       "description": "sbi is a Python package for simulation-based inference, designed to meet the needs of both researchers and practitioners. Whether you need fine-grained control or an easy-to-use interface, sbi has you covered.",
       "prs": [
         {
