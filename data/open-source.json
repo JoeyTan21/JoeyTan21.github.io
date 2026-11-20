@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-11-18T15:59:34Z",
+  "generated_at": "2026-11-20T13:21:20Z",
   "username": "JoeyTan21",
-  "merged_pr_count": 31,
-  "repo_count": 24,
-  "issue_count": 100,
-  "pr_count": 60,
-  "open_pr_count": 25,
+  "merged_pr_count": 32,
+  "repo_count": 25,
+  "issue_count": 104,
+  "pr_count": 63,
+  "open_pr_count": 27,
   "repos": [
     {
       "name": "huggingface/transformers",
       "url": "https://github.com/huggingface/transformers",
-      "stars": 169215,
+      "stars": 169316,
       "description": "🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training. ",
       "prs": [
         {
@@ -24,7 +24,7 @@
     {
       "name": "docling-project/docling",
       "url": "https://github.com/docling-project/docling",
-      "stars": 70754,
+      "stars": 70813,
       "description": "Get your documents ready for gen AI",
       "prs": [
         {
@@ -38,7 +38,7 @@
     {
       "name": "mlflow/mlflow",
       "url": "https://github.com/mlflow/mlflow",
-      "stars": 28870,
+      "stars": 28907,
       "description": "The open source AI engineering platform for agents, LLMs, and ML models. MLflow enables teams of all sizes to debug, evaluate, monitor, and optimize production-quality AI applications while controlling costs and managing access to models and data.",
       "prs": [
         {
@@ -58,7 +58,7 @@
     {
       "name": "huggingface/datasets",
       "url": "https://github.com/huggingface/datasets",
-      "stars": 22158,
+      "stars": 22173,
       "description": "🤗 The largest hub of ready-to-use datasets for AI models with fast, easy-to-use and efficient data manipulation tools",
       "prs": [
         {
@@ -72,7 +72,7 @@
     {
       "name": "pydantic/pydantic-ai",
       "url": "https://github.com/pydantic/pydantic-ai",
-      "stars": 21273,
+      "stars": 21311,
       "description": "How Python does AI. Agents, realtime voice, image generation, embeddings. Every model, every interface, typed end to end.",
       "prs": [
         {
@@ -86,7 +86,7 @@
     {
       "name": "huggingface/trl",
       "url": "https://github.com/huggingface/trl",
-      "stars": 19764,
+      "stars": 19778,
       "description": "Train transformer language models with reinforcement learning.",
       "prs": [
         {
@@ -100,7 +100,7 @@
     {
       "name": "huggingface/sentence-transformers",
       "url": "https://github.com/huggingface/sentence-transformers",
-      "stars": 19289,
+      "stars": 19292,
       "description": "State-of-the-Art Embeddings, Retrieval, and Reranking",
       "prs": [
         {
@@ -126,7 +126,7 @@
     {
       "name": "wxt-dev/wxt",
       "url": "https://github.com/wxt-dev/wxt",
-      "stars": 10750,
+      "stars": 10757,
       "description": "⚡ Next-gen Web Extension Framework",
       "prs": [
         {
@@ -140,7 +140,7 @@
     {
       "name": "huggingface/accelerate",
       "url": "https://github.com/huggingface/accelerate",
-      "stars": 9951,
+      "stars": 9950,
       "description": "🚀 A simple way to launch, train, and use PyTorch models on almost any device and distributed configuration, automatic mixed precision (including fp8), and easy-to-configure FSDP and DeepSpeed support",
       "prs": [
         {
@@ -154,7 +154,7 @@
     {
       "name": "tobymao/sqlglot",
       "url": "https://github.com/tobymao/sqlglot",
-      "stars": 9802,
+      "stars": 9809,
       "description": "Python SQL Parser and Transpiler",
       "prs": [
         {
@@ -168,7 +168,7 @@
     {
       "name": "unit8co/darts",
       "url": "https://github.com/unit8co/darts",
-      "stars": 9591,
+      "stars": 9593,
       "description": "A python library for user-friendly forecasting and anomaly detection on time series.",
       "prs": [
         {
@@ -182,7 +182,7 @@
     {
       "name": "py-why/dowhy",
       "url": "https://github.com/py-why/dowhy",
-      "stars": 8408,
+      "stars": 8410,
       "description": "DoWhy is a Python library for causal inference that supports explicit modeling and testing of causal assumptions. DoWhy is based on a unified language for causal inference, combining causal graphical models and potential outcomes frameworks. ",
       "prs": [
         {
@@ -196,7 +196,7 @@
     {
       "name": "holoviz/panel",
       "url": "https://github.com/holoviz/panel",
-      "stars": 5826,
+      "stars": 5827,
       "description": "Panel: The powerful data exploration & web app framework for Python",
       "prs": [
         {
@@ -210,7 +210,7 @@
     {
       "name": "pydantic/logfire",
       "url": "https://github.com/pydantic/logfire",
-      "stars": 4559,
+      "stars": 4561,
       "description": "AI observability platform for production LLM and agent systems.",
       "prs": [
         {
@@ -224,7 +224,7 @@
     {
       "name": "TransformerLensOrg/TransformerLens",
       "url": "https://github.com/TransformerLensOrg/TransformerLens",
-      "stars": 4081,
+      "stars": 4086,
       "description": "A library for mechanistic interpretability of GPT-style language models",
       "prs": [
         {
@@ -238,7 +238,7 @@
     {
       "name": "UKGovernmentBEIS/inspect_ai",
       "url": "https://github.com/UKGovernmentBEIS/inspect_ai",
-      "stars": 3282,
+      "stars": 3295,
       "description": "Inspect: A framework for large language model evaluations",
       "prs": [
         {
@@ -252,7 +252,7 @@
     {
       "name": "narwhals-dev/narwhals",
       "url": "https://github.com/narwhals-dev/narwhals",
-      "stars": 1752,
+      "stars": 1753,
       "description": "Lightweight and extensible compatibility layer between dataframe libraries!",
       "prs": [
         {
@@ -292,7 +292,7 @@
     {
       "name": "bambinos/bambi",
       "url": "https://github.com/bambinos/bambi",
-      "stars": 1310,
+      "stars": 1309,
       "description": "BAyesian Model-Building Interface (Bambi) in Python.",
       "prs": [
         {
@@ -312,7 +312,7 @@
     {
       "name": "scikit-hep/awkward",
       "url": "https://github.com/scikit-hep/awkward",
-      "stars": 990,
+      "stars": 989,
       "description": "Manipulate JSON-like data with NumPy-like idioms.",
       "prs": [
         {
@@ -326,7 +326,7 @@
     {
       "name": "sbi-dev/sbi",
       "url": "https://github.com/sbi-dev/sbi",
-      "stars": 890,
+      "stars": 889,
       "description": "sbi is a Python package for simulation-based inference, designed to meet the needs of both researchers and practitioners. Whether you need fine-grained control or an easy-to-use interface, sbi has you covered.",
       "prs": [
         {
@@ -338,9 +338,23 @@
       ]
     },
     {
+      "name": "scverse/anndata",
+      "url": "https://github.com/scverse/anndata",
+      "stars": 786,
+      "description": "Annotated data.",
+      "prs": [
+        {
+          "number": 2744,
+          "title": "fix: respect dtype in read_excel",
+          "url": "https://github.com/scverse/anndata/pull/2744",
+          "merged_at": "2026-11-20T08:56:17Z"
+        }
+      ]
+    },
+    {
       "name": "optimagic-dev/optimagic",
       "url": "https://github.com/optimagic-dev/optimagic",
-      "stars": 324,
+      "stars": 323,
       "description": "optimagic is a Python package for numerical optimization. It is a unified interface to optimizers from SciPy, NlOpt and other packages.  optimagic's minimize function works just like SciPy's, so you don't have to adjust your code. You simply get more optimizers for free. On top you get diagnostic tools, parallel numerical derivatives and more.",
       "prs": [
         {
