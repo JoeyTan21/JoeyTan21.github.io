@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-11-20T13:21:20Z",
+  "generated_at": "2026-11-21T21:19:04Z",
   "username": "JoeyTan21",
-  "merged_pr_count": 32,
+  "merged_pr_count": 33,
   "repo_count": 25,
-  "issue_count": 104,
-  "pr_count": 63,
-  "open_pr_count": 27,
+  "issue_count": 105,
+  "pr_count": 65,
+  "open_pr_count": 28,
   "repos": [
     {
       "name": "huggingface/transformers",
       "url": "https://github.com/huggingface/transformers",
-      "stars": 169316,
+      "stars": 169357,
       "description": "🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training. ",
       "prs": [
         {
@@ -24,7 +24,7 @@
     {
       "name": "docling-project/docling",
       "url": "https://github.com/docling-project/docling",
-      "stars": 70813,
+      "stars": 70848,
       "description": "Get your documents ready for gen AI",
       "prs": [
         {
@@ -38,7 +38,7 @@
     {
       "name": "mlflow/mlflow",
       "url": "https://github.com/mlflow/mlflow",
-      "stars": 28907,
+      "stars": 28924,
       "description": "The open source AI engineering platform for agents, LLMs, and ML models. MLflow enables teams of all sizes to debug, evaluate, monitor, and optimize production-quality AI applications while controlling costs and managing access to models and data.",
       "prs": [
         {
@@ -58,7 +58,7 @@
     {
       "name": "huggingface/datasets",
       "url": "https://github.com/huggingface/datasets",
-      "stars": 22173,
+      "stars": 22176,
       "description": "🤗 The largest hub of ready-to-use datasets for AI models with fast, easy-to-use and efficient data manipulation tools",
       "prs": [
         {
@@ -72,7 +72,7 @@
     {
       "name": "pydantic/pydantic-ai",
       "url": "https://github.com/pydantic/pydantic-ai",
-      "stars": 21311,
+      "stars": 21328,
       "description": "How Python does AI. Agents, realtime voice, image generation, embeddings. Every model, every interface, typed end to end.",
       "prs": [
         {
@@ -86,7 +86,7 @@
     {
       "name": "huggingface/trl",
       "url": "https://github.com/huggingface/trl",
-      "stars": 19778,
+      "stars": 19788,
       "description": "Train transformer language models with reinforcement learning.",
       "prs": [
         {
@@ -100,7 +100,7 @@
     {
       "name": "huggingface/sentence-transformers",
       "url": "https://github.com/huggingface/sentence-transformers",
-      "stars": 19292,
+      "stars": 19297,
       "description": "State-of-the-Art Embeddings, Retrieval, and Reranking",
       "prs": [
         {
@@ -126,7 +126,7 @@
     {
       "name": "wxt-dev/wxt",
       "url": "https://github.com/wxt-dev/wxt",
-      "stars": 10757,
+      "stars": 10759,
       "description": "⚡ Next-gen Web Extension Framework",
       "prs": [
         {
@@ -140,7 +140,7 @@
     {
       "name": "huggingface/accelerate",
       "url": "https://github.com/huggingface/accelerate",
-      "stars": 9950,
+      "stars": 9952,
       "description": "🚀 A simple way to launch, train, and use PyTorch models on almost any device and distributed configuration, automatic mixed precision (including fp8), and easy-to-configure FSDP and DeepSpeed support",
       "prs": [
         {
@@ -168,7 +168,7 @@
     {
       "name": "unit8co/darts",
       "url": "https://github.com/unit8co/darts",
-      "stars": 9593,
+      "stars": 9594,
       "description": "A python library for user-friendly forecasting and anomaly detection on time series.",
       "prs": [
         {
@@ -196,9 +196,15 @@
     {
       "name": "holoviz/panel",
       "url": "https://github.com/holoviz/panel",
-      "stars": 5827,
+      "stars": 5828,
       "description": "Panel: The powerful data exploration & web app framework for Python",
       "prs": [
+        {
+          "number": 9132,
+          "title": "fix: Allow DatetimeRangeInput without value and both bounds",
+          "url": "https://github.com/holoviz/panel/pull/9132",
+          "merged_at": "2026-11-20T22:40:20Z"
+        },
         {
           "number": 8910,
           "title": "fix: Handle one-sided bounds in DatetimeInput validation",
@@ -210,7 +216,7 @@
     {
       "name": "pydantic/logfire",
       "url": "https://github.com/pydantic/logfire",
-      "stars": 4561,
+      "stars": 4564,
       "description": "AI observability platform for production LLM and agent systems.",
       "prs": [
         {
@@ -224,7 +230,7 @@
     {
       "name": "TransformerLensOrg/TransformerLens",
       "url": "https://github.com/TransformerLensOrg/TransformerLens",
-      "stars": 4086,
+      "stars": 4091,
       "description": "A library for mechanistic interpretability of GPT-style language models",
       "prs": [
         {
@@ -238,7 +244,7 @@
     {
       "name": "UKGovernmentBEIS/inspect_ai",
       "url": "https://github.com/UKGovernmentBEIS/inspect_ai",
-      "stars": 3295,
+      "stars": 3304,
       "description": "Inspect: A framework for large language model evaluations",
       "prs": [
         {
@@ -252,7 +258,7 @@
     {
       "name": "narwhals-dev/narwhals",
       "url": "https://github.com/narwhals-dev/narwhals",
-      "stars": 1753,
+      "stars": 1756,
       "description": "Lightweight and extensible compatibility layer between dataframe libraries!",
       "prs": [
         {
