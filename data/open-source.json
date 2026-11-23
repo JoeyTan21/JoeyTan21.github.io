@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-11-22T11:57:36Z",
+  "generated_at": "2026-11-23T16:16:41Z",
   "username": "JoeyTan21",
-  "merged_pr_count": 35,
+  "merged_pr_count": 37,
   "repo_count": 25,
-  "issue_count": 107,
-  "pr_count": 67,
+  "issue_count": 109,
+  "pr_count": 69,
   "open_pr_count": 28,
   "repos": [
     {
       "name": "huggingface/transformers",
       "url": "https://github.com/huggingface/transformers",
-      "stars": 169358,
+      "stars": 169373,
       "description": "🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training. ",
       "prs": [
         {
@@ -24,7 +24,7 @@
     {
       "name": "docling-project/docling",
       "url": "https://github.com/docling-project/docling",
-      "stars": 70870,
+      "stars": 70921,
       "description": "Get your documents ready for gen AI",
       "prs": [
         {
@@ -38,7 +38,7 @@
     {
       "name": "mlflow/mlflow",
       "url": "https://github.com/mlflow/mlflow",
-      "stars": 28927,
+      "stars": 28940,
       "description": "The open source AI engineering platform for agents, LLMs, and ML models. MLflow enables teams of all sizes to debug, evaluate, monitor, and optimize production-quality AI applications while controlling costs and managing access to models and data.",
       "prs": [
         {
@@ -58,7 +58,7 @@
     {
       "name": "huggingface/datasets",
       "url": "https://github.com/huggingface/datasets",
-      "stars": 22178,
+      "stars": 22182,
       "description": "🤗 The largest hub of ready-to-use datasets for AI models with fast, easy-to-use and efficient data manipulation tools",
       "prs": [
         {
@@ -72,7 +72,7 @@
     {
       "name": "pydantic/pydantic-ai",
       "url": "https://github.com/pydantic/pydantic-ai",
-      "stars": 21332,
+      "stars": 21351,
       "description": "How Python does AI. Agents, realtime voice, image generation, embeddings. Every model, every interface, typed end to end.",
       "prs": [
         {
@@ -86,7 +86,7 @@
     {
       "name": "huggingface/trl",
       "url": "https://github.com/huggingface/trl",
-      "stars": 19792,
+      "stars": 19800,
       "description": "Train transformer language models with reinforcement learning.",
       "prs": [
         {
@@ -100,7 +100,7 @@
     {
       "name": "huggingface/sentence-transformers",
       "url": "https://github.com/huggingface/sentence-transformers",
-      "stars": 19299,
+      "stars": 19304,
       "description": "State-of-the-Art Embeddings, Retrieval, and Reranking",
       "prs": [
         {
@@ -126,7 +126,7 @@
     {
       "name": "wxt-dev/wxt",
       "url": "https://github.com/wxt-dev/wxt",
-      "stars": 10760,
+      "stars": 10767,
       "description": "⚡ Next-gen Web Extension Framework",
       "prs": [
         {
@@ -140,7 +140,7 @@
     {
       "name": "huggingface/accelerate",
       "url": "https://github.com/huggingface/accelerate",
-      "stars": 9953,
+      "stars": 9954,
       "description": "🚀 A simple way to launch, train, and use PyTorch models on almost any device and distributed configuration, automatic mixed precision (including fp8), and easy-to-configure FSDP and DeepSpeed support",
       "prs": [
         {
@@ -154,7 +154,7 @@
     {
       "name": "tobymao/sqlglot",
       "url": "https://github.com/tobymao/sqlglot",
-      "stars": 9808,
+      "stars": 9811,
       "description": "Python SQL Parser and Transpiler",
       "prs": [
         {
@@ -168,7 +168,7 @@
     {
       "name": "unit8co/darts",
       "url": "https://github.com/unit8co/darts",
-      "stars": 9594,
+      "stars": 9595,
       "description": "A python library for user-friendly forecasting and anomaly detection on time series.",
       "prs": [
         {
@@ -196,9 +196,15 @@
     {
       "name": "holoviz/panel",
       "url": "https://github.com/holoviz/panel",
-      "stars": 5829,
+      "stars": 5830,
       "description": "Panel: The powerful data exploration & web app framework for Python",
       "prs": [
+        {
+          "number": 9141,
+          "title": "fix: Keep other query parameters unchanged when updating the URL query",
+          "url": "https://github.com/holoviz/panel/pull/9141",
+          "merged_at": "2026-11-22T15:50:19Z"
+        },
         {
           "number": 9137,
           "title": "fix: Hash time and timedelta arguments by value in pn.cache",
@@ -226,6 +232,12 @@
       "description": "AI observability platform for production LLM and agent systems.",
       "prs": [
         {
+          "number": 2859,
+          "title": "Encode bytes subclasses with a custom repr like plain bytes",
+          "url": "https://github.com/pydantic/logfire/pull/2859",
+          "merged_at": "2026-11-23T14:43:05Z"
+        },
+        {
           "number": 2502,
           "title": "Convert span attribute ints below the int64 minimum to strings",
           "url": "https://github.com/pydantic/logfire/pull/2502",
@@ -236,7 +248,7 @@
     {
       "name": "TransformerLensOrg/TransformerLens",
       "url": "https://github.com/TransformerLensOrg/TransformerLens",
-      "stars": 4092,
+      "stars": 4100,
       "description": "A library for mechanistic interpretability of GPT-style language models",
       "prs": [
         {
@@ -250,7 +262,7 @@
     {
       "name": "UKGovernmentBEIS/inspect_ai",
       "url": "https://github.com/UKGovernmentBEIS/inspect_ai",
-      "stars": 3305,
+      "stars": 3315,
       "description": "Inspect: A framework for large language model evaluations",
       "prs": [
         {
@@ -338,7 +350,7 @@
     {
       "name": "sbi-dev/sbi",
       "url": "https://github.com/sbi-dev/sbi",
-      "stars": 889,
+      "stars": 890,
       "description": "sbi is a Python package for simulation-based inference, designed to meet the needs of both researchers and practitioners. Whether you need fine-grained control or an easy-to-use interface, sbi has you covered.",
       "prs": [
         {
