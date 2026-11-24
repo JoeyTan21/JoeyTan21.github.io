@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-11-23T16:16:41Z",
+  "generated_at": "2026-11-24T17:31:02Z",
   "username": "JoeyTan21",
-  "merged_pr_count": 37,
+  "merged_pr_count": 39,
   "repo_count": 25,
-  "issue_count": 109,
-  "pr_count": 69,
+  "issue_count": 111,
+  "pr_count": 71,
   "open_pr_count": 28,
   "repos": [
     {
       "name": "huggingface/transformers",
       "url": "https://github.com/huggingface/transformers",
-      "stars": 169373,
+      "stars": 169249,
       "description": "🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training. ",
       "prs": [
         {
@@ -24,7 +24,7 @@
     {
       "name": "docling-project/docling",
       "url": "https://github.com/docling-project/docling",
-      "stars": 70921,
+      "stars": 70972,
       "description": "Get your documents ready for gen AI",
       "prs": [
         {
@@ -38,7 +38,7 @@
     {
       "name": "mlflow/mlflow",
       "url": "https://github.com/mlflow/mlflow",
-      "stars": 28940,
+      "stars": 28954,
       "description": "The open source AI engineering platform for agents, LLMs, and ML models. MLflow enables teams of all sizes to debug, evaluate, monitor, and optimize production-quality AI applications while controlling costs and managing access to models and data.",
       "prs": [
         {
@@ -58,7 +58,7 @@
     {
       "name": "huggingface/datasets",
       "url": "https://github.com/huggingface/datasets",
-      "stars": 22182,
+      "stars": 22184,
       "description": "🤗 The largest hub of ready-to-use datasets for AI models with fast, easy-to-use and efficient data manipulation tools",
       "prs": [
         {
@@ -72,7 +72,7 @@
     {
       "name": "pydantic/pydantic-ai",
       "url": "https://github.com/pydantic/pydantic-ai",
-      "stars": 21351,
+      "stars": 21366,
       "description": "How Python does AI. Agents, realtime voice, image generation, embeddings. Every model, every interface, typed end to end.",
       "prs": [
         {
@@ -86,7 +86,7 @@
     {
       "name": "huggingface/trl",
       "url": "https://github.com/huggingface/trl",
-      "stars": 19800,
+      "stars": 19814,
       "description": "Train transformer language models with reinforcement learning.",
       "prs": [
         {
@@ -100,7 +100,7 @@
     {
       "name": "huggingface/sentence-transformers",
       "url": "https://github.com/huggingface/sentence-transformers",
-      "stars": 19304,
+      "stars": 19305,
       "description": "State-of-the-Art Embeddings, Retrieval, and Reranking",
       "prs": [
         {
@@ -126,7 +126,7 @@
     {
       "name": "wxt-dev/wxt",
       "url": "https://github.com/wxt-dev/wxt",
-      "stars": 10767,
+      "stars": 10773,
       "description": "⚡ Next-gen Web Extension Framework",
       "prs": [
         {
@@ -140,7 +140,7 @@
     {
       "name": "huggingface/accelerate",
       "url": "https://github.com/huggingface/accelerate",
-      "stars": 9954,
+      "stars": 9955,
       "description": "🚀 A simple way to launch, train, and use PyTorch models on almost any device and distributed configuration, automatic mixed precision (including fp8), and easy-to-configure FSDP and DeepSpeed support",
       "prs": [
         {
@@ -154,7 +154,7 @@
     {
       "name": "tobymao/sqlglot",
       "url": "https://github.com/tobymao/sqlglot",
-      "stars": 9811,
+      "stars": 9813,
       "description": "Python SQL Parser and Transpiler",
       "prs": [
         {
@@ -168,7 +168,7 @@
     {
       "name": "unit8co/darts",
       "url": "https://github.com/unit8co/darts",
-      "stars": 9595,
+      "stars": 9596,
       "description": "A python library for user-friendly forecasting and anomaly detection on time series.",
       "prs": [
         {
@@ -182,7 +182,7 @@
     {
       "name": "py-why/dowhy",
       "url": "https://github.com/py-why/dowhy",
-      "stars": 8410,
+      "stars": 8414,
       "description": "DoWhy is a Python library for causal inference that supports explicit modeling and testing of causal assumptions. DoWhy is based on a unified language for causal inference, combining causal graphical models and potential outcomes frameworks. ",
       "prs": [
         {
@@ -196,9 +196,15 @@
     {
       "name": "holoviz/panel",
       "url": "https://github.com/holoviz/panel",
-      "stars": 5830,
+      "stars": 5831,
       "description": "Panel: The powerful data exploration & web app framework for Python",
       "prs": [
+        {
+          "number": 9157,
+          "title": "fix: Do not require polars for DataFrame parameter defaults on custom components",
+          "url": "https://github.com/holoviz/panel/pull/9157",
+          "merged_at": "2026-11-24T00:37:10Z"
+        },
         {
           "number": 9141,
           "title": "fix: Keep other query parameters unchanged when updating the URL query",
@@ -232,6 +238,12 @@
       "description": "AI observability platform for production LLM and agent systems.",
       "prs": [
         {
+          "number": 2879,
+          "title": "Print non-ISO date and time values as is in the verbose console exporter",
+          "url": "https://github.com/pydantic/logfire/pull/2879",
+          "merged_at": "2026-11-24T10:09:20Z"
+        },
+        {
           "number": 2859,
           "title": "Encode bytes subclasses with a custom repr like plain bytes",
           "url": "https://github.com/pydantic/logfire/pull/2859",
@@ -248,7 +260,7 @@
     {
       "name": "TransformerLensOrg/TransformerLens",
       "url": "https://github.com/TransformerLensOrg/TransformerLens",
-      "stars": 4100,
+      "stars": 4105,
       "description": "A library for mechanistic interpretability of GPT-style language models",
       "prs": [
         {
@@ -262,7 +274,7 @@
     {
       "name": "UKGovernmentBEIS/inspect_ai",
       "url": "https://github.com/UKGovernmentBEIS/inspect_ai",
-      "stars": 3315,
+      "stars": 3327,
       "description": "Inspect: A framework for large language model evaluations",
       "prs": [
         {
@@ -276,7 +288,7 @@
     {
       "name": "narwhals-dev/narwhals",
       "url": "https://github.com/narwhals-dev/narwhals",
-      "stars": 1756,
+      "stars": 1758,
       "description": "Lightweight and extensible compatibility layer between dataframe libraries!",
       "prs": [
         {
@@ -290,7 +302,7 @@
     {
       "name": "skrub-data/skrub",
       "url": "https://github.com/skrub-data/skrub",
-      "stars": 1670,
+      "stars": 1672,
       "description": "Machine learning with dataframes",
       "prs": [
         {
@@ -364,7 +376,7 @@
     {
       "name": "scverse/anndata",
       "url": "https://github.com/scverse/anndata",
-      "stars": 786,
+      "stars": 787,
       "description": "Annotated data.",
       "prs": [
         {
